@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Aspose.Words</id>
+    <version>19.1.0</version>
+    <title>Aspose.Words for .NET</title>
+    <authors>Aspose</authors>
+    <owners>Aspose</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://company.aspose.com/legal/eula</licenseUrl>
+    <projectUrl>https://products.aspose.com/words/net</projectUrl>
+    <iconUrl>https://joomla-aspose.dynabic.com/templates/aspose/App_Themes/V3/images/words/272x272/aspose_words-for-net.png</iconUrl>
+    <description>Aspose.Words for .NET is a cross-platform class library that enables your applications to perform a great range of document processing tasks. With Aspose.Words you can load, save and convert documents between the following formats: DOC, DOT, DOCX, DOCM, DOTX, DOTM, XML (including Word 2003 XML), RTF, HTML, MHTML, MOBI, ODT, OTT, TXT – also you can convert them to: PDF, XPS, SVG, EPUB, XAML, PS, PCL, TIFF, BMP, PNG, EMF, JPEG, GIF and other formats. With Aspose.Words you can generate, modify, convert, render and print documents without utilizing Microsoft Word®.
+
+Aspose.Words for .NET is well documented to help you create your solutions on different platforms.
+
+Rich Set of Features
+
+Aspose.Words for .NET features can be divided into four main areas:
+ - Conversions: High quality conversions to and from DOC, OOXML, RTF, WordprocessingML, HTML, MHTML, TXT and OpenDocument formats
+ - Document Object Model: Programmatic access through a rich API to all document elements and formatting allows to create, modify, extract, copy, split, join, and replace document content
+ - Rendering: Convert whole documents or pages to PDF, XPS or for server-side document generation. Also convert document pages to TIFF, PNG, BMP or EMF images, print or render pages to .NET Graphics. All with high fidelity - exactly like Microsoft Word® would have done it.
+ - Reporting: Generate documents or reports from scratch or by filling templates with data from data sources or business objects.
+
+Platform Independence
+
+You can use Aspose.Words for .NET to build any type of a 32-bit or 64-bit .NET application including ASP.NET, WCF, WinForms, UWP, .NET Standard, .NET Core etc. It is possible to use Aspose.Words for .NET via COM Interop from ASP, Perl, PHP and Python. You can also use Aspose.Words for .NET to build applications with Mono.
+
+Performance and Scalability
+
+Aspose.Words is designed to perform great both on a server or client. Aspose.Words is a single .NET assembly that can be deployed with any .NET application by simply copying it. You do not have to worry about any other services or modules. You can literally generate thousands of documents in minutes with Aspose.Words and that involves opening a document, modifying content and formatting or populating it with data and saving it. Even most of the complex documents are opened and saved on a P4 2.4Ghz 1Gb RAM machine in fractions of a second.
+
+Aspose.Words is multithread safe as long as only one thread works on a document at a time. It is a typical scenario to have one thread working on one document. Different threads can safely work on different documents at the same time.
+
+Free support for Aspose.Words for .NET is provided on our support forum:
+https://forum.aspose.com/ 
+and on StackOverflow:
+https://stackoverflow.com/questions/tagged/aspose.words</description>
+    <summary>Aspose.Words for .NET is a class library for .NET, .NETStandard and Xamarin that enables you to perform a wide range of document processing tasks directly within your applications.</summary>
+    <releaseNotes>https://docs.aspose.com/display/wordsnet/Aspose.Words+for+.NET+19.1+Release+Notes</releaseNotes>
+    <copyright>(C) Aspose 2002-2019. All Rights Reserved.</copyright>
+    <tags>Convert Word DOC RTF DOCX OOXML OpenDocument PDF XPS ODT HTML XHTML WordprocessingML Document EPUB .NET Core Xamarin iOS Mac</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Text.Encoding.CodePages" version="4.5.0" />
+        <dependency id="System.Reflection.Emit" version="4.3.0" />
+        <dependency id="System.Reflection.Emit.ILGeneration" version="4.3.0" />
+        <dependency id="SkiaSharp" version="1.60.3" />
+      </group>
+      <group targetFramework="MonoAndroid2.3">
+        <dependency id="SkiaSharp" version="1.60.3" />
+      </group>
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="SkiaSharp" version="1.60.3" />
+      </group>
+      <group targetFramework="Xamarin.Mac2.0">
+        <dependency id="SkiaSharp" version="1.60.3" />
+      </group>
+      <group targetFramework=".NETFramework2.0" />
+      <group targetFramework=".NETFramework3.5" />
+      <group targetFramework=".NETFramework4.0" />
+    </dependencies>
+  </metadata>
+</package>

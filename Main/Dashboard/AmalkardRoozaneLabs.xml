@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="fa-IR">
+  <Title Text="عملکرد روزانه آزمایشگاه ها" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="sql-1_LaboratoryRASF_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="sql-1" />
+          <Parameter Name="database" Value="LaboratoryRASF" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="AliReza23280" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="DailyProcessReportForLaboratory_select">
+        <Parameter Name="@From" Type="DevExpress.DataAccess.Expression">(System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.From])</Parameter>
+        <Parameter Name="@To" Type="DevExpress.DataAccess.Expression">(System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.To])</Parameter>
+        <ProcName>DailyProcessReportForLaboratory_select</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="DailyProcessReportForLaboratory_select">
+            <Field Name="ActionDate" Type="String" />
+            <Field Name="Kovanto" Type="Int64" />
+            <Field Name="Metal" Type="Int64" />
+            <Field Name="Chemistery" Type="Int64" />
+            <Field Name="Mechanic" Type="Int64" />
+            <Field Name="Microscopi" Type="Int64" />
+            <Field Name="Coaching" Type="Int64" />
+            <Field Name="Polymer" Type="Int64" />
+            <Field Name="XrdXrf" Type="Int64" />
+            <Field Name="DesignEngineer" Type="Int64" />
+            <Field Name="NonDestructive" Type="Int64" />
+            <Field Name="Informatics" Type="Int64" />
+            <Field Name="Demensional" Type="Int64" />
+            <Field Name="Abration" Type="Int64" />
+            <Field Name="DestructionHandling" Type="Int64" />
+            <Field Name="Project" Type="Int64" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="From" Type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Value="2016-12-18T00:00:00" Visible="false" />
+    <Parameter Name="To" Type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Value="2016-12-18T00:00:00" Visible="false" />
+  </Parameters>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="نمودار" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="DailyProcessReportForLaboratory_select">
+      <DataItems>
+        <Measure DataMember="Abration" Name="خوردگی" DefaultId="DataItem1" />
+        <Measure DataMember="Chemistery" Name="شیمی تر" DefaultId="DataItem2" />
+        <Measure DataMember="Coaching" Name="آماده سازی" DefaultId="DataItem3" />
+        <Measure DataMember="Demensional" Name="ابعادی" DefaultId="DataItem4" />
+        <Measure DataMember="DesignEngineer" Name="طراحی مهندسی" DefaultId="DataItem5" />
+        <Measure DataMember="DestructionHandling" Name="مطالعات و بررسی علت تخریب" DefaultId="DataItem6" />
+        <Measure DataMember="Informatics" Name="اطلاع رسانی" DefaultId="DataItem7" />
+        <Measure DataMember="Kovanto" Name="کوانتومتری" DefaultId="DataItem8" />
+        <Measure DataMember="Mechanic" Name="مکانیکی" DefaultId="DataItem9" />
+        <Measure DataMember="Metal" Name="متالوگرافی" DefaultId="DataItem10" />
+        <Measure DataMember="Microscopi" Name="میکروسکوپ الکترونیکی" DefaultId="DataItem11" />
+        <Measure DataMember="NonDestructive" Name="غیر مخرب" DefaultId="DataItem12" />
+        <Measure DataMember="Polymer" Name="پلیمر" DefaultId="DataItem13" />
+        <Measure DataMember="Project" Name="پروژه ها" DefaultId="DataItem14" />
+        <Measure DataMember="XrdXrf" Name="Xrd&amp;Xrf" DefaultId="DataItem15" />
+        <Dimension DataMember="ActionDate" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Values>
+        <Value DefaultId="DataItem1" />
+        <Value DefaultId="DataItem2" />
+        <Value DefaultId="DataItem3" />
+        <Value DefaultId="DataItem4" />
+        <Value DefaultId="DataItem5" />
+        <Value DefaultId="DataItem6" />
+        <Value DefaultId="DataItem7" />
+        <Value DefaultId="DataItem8" />
+        <Value DefaultId="DataItem9" />
+        <Value DefaultId="DataItem10" />
+        <Value DefaultId="DataItem11" />
+        <Value DefaultId="DataItem12" />
+        <Value DefaultId="DataItem13" />
+        <Value DefaultId="DataItem14" />
+        <Value DefaultId="DataItem15" />
+      </Values>
+    </Pie>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="dashboardSqlDataSource1" DataMember="DailyProcessReportForLaboratory_select" Color="-15524834">
+      <MeasureKey>
+        <Definition DataMember="Abration" />
+      </MeasureKey>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="pieDashboardItem1" Weight="0.125" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

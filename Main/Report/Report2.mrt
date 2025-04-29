@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <DataConnection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>DataConnection</Alias>
+        <ConnectionStringEncrypted>+fLLicIF84HHG6Ds5T11Kt5wcwvFBTHwcXv13Ho9Ii/ZcMvj3V/TgWBJTYRO2Hcb0nBlos0JQ/ViBmWlZCzrY/ZskYPNTErd4k0pxOktJXuQVNmJS11p7eIabfRhTKoXkO7R78ZMWc1iS70E6Swoe9E=</ConnectionStringEncrypted>
+        <Name>DataConnection</Name>
+      </DataConnection>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <Date Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Date</Alias>
+        <Columns isList="true" count="1">
+          <value>date,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Date</Name>
+        <NameInSource>DataConnection</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select dbo.DateConvertor(GETDATE())date </SqlCommand>
+      </Date>
+      <Test_Azmun Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Test_Azmun</Alias>
+        <Columns isList="true" count="17">
+          <value>MasterName,System.String</value>
+          <value>Name,System.String</value>
+          <value>Destruct,System.Byte</value>
+          <value>EnglishReporter,System.Boolean</value>
+          <value>Executers,System.String</value>
+          <value>ReceptionDate,System.String</value>
+          <value>Delivery,System.String</value>
+          <value>CompanyName,System.String</value>
+          <value>ContractNo,System.Int32</value>
+          <value>NumberOfTests,System.Int32</value>
+          <value>FeBase,System.Byte</value>
+          <value>PartNumber,System.Int32</value>
+          <value>LabName,System.String</value>
+          <value>SmallPicture,System.Byte[]</value>
+          <value>StepByStep,System.Boolean</value>
+          <value>Description,System.String</value>
+          <value>ConnectorId,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Test_Azmun</Name>
+        <NameInSource>DataConnection</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>_x0040_Code,,14,0</value>
+        </Parameters>
+        <SqlCommand>select MasterTest.MasterName,Parts_Master.Name,Parts_Master.Destruct,Contracts_Base.EnglishReporter,dbo.Get_User_Name(Contracts_Base.Executers) as Executers,dbo.DateConvertor(Contracts_Base.ReceptionDate) as ReceptionDate
+	,dbo.DateConvertor(Contracts_Base.Delivery) as Delivery , Companies_Base.CompanyName , Contracts_Base.ContractNo ,Contracts_Base.StepByStep
+	, Parts_Tests_Master.NumberOfTests , Parts_Master.FeBase , Parts_Master.PartNumber,dbo.Concat_Lab_Name((select LaboratoryName from dbo.Parts_Lab_View where PartsMasterCode = Parts_Master.Parts_Master_Code FOR XML PATH ('')), 'LaboratoryName') as LabName
+	,dbo.ResizePicture(Parts_Picture.Picture,96) as SmallPicture ,Contracts_Base.[Description],case when ConnectorId is not null then dbo.Get_User_Name(Companies_Base.ConnectorId)  else '' end ConnectorId
+	from Parts_Tests_Master
+	left join MainTest on MainTest.MainCode = Parts_Tests_Master.MainTestCode
+	left join Laboratory on Laboratory.LaboratoryCode = MainTest.LaboratoryCode_MainTest
+	left join MasterTest on MasterTest.MasterTestCode = Parts_Tests_Master.MasterTestCode
+	left join Parts_Master on Parts_Master.Parts_Master_Code = Parts_Tests_Master.PartsMasterCode
+	Left Join [Parts_Picture] on [Parts_Picture].Parts_Picture_Code = [Parts_Master].Parts_Master_Code 
+	left join Contracts_Base on Contracts_Base.ContractsCode = Parts_Master.ContractsBaseCode
+	left join Companies_Base on Contracts_Base.Company_Invoice = Companies_Base.CompaniesCode
+where Parts_Tests_Master.[Status]= 1 and Parts_Master.Void = 0 and Contracts_Base.ContractsCode = @Code
+and Laboratory.LaboratoryCode in ('E2A78205-BD25-41C4-889C-D0DD4C786F76','02F65461-7F06-42EB-A4B6-F219EF778EC2','7331AE30-36B6-4DD2-8D90-A4A49F140E02')
+order by PartNumber
+</SqlCommand>
+      </Test_Azmun>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page2 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <PageFooterBand1 Ref="6" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,26.9,19,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text20 Ref="7" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>0,0.1,5.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Mitra,11,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{TotalPageCount} - {PageNumber} : صفحه </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text20>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageFooterBand1>
+        <DataBand1 Ref="8" type="DataBand" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,19,7.8</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text2 Ref="9" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>0,2.4,17.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Mitra,11,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="5" />
+              <Parent isRef="8" />
+              <Text>{Test_Azmun.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="10" type="Text" isKey="true">
+              <Border>Top, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>17.6,2.4,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Mitra,11,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="5" />
+              <Parent isRef="8" />
+              <Text>:نام قطعه</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Panel1 Ref="11" type="Panel" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3,19,4.6</ClientRectangle>
+              <Components isList="true" count="19">
+                <Image1 Ref="12" type="Image" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,0,5.3,2.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DataColumn>Test_Azmun.SmallPicture</DataColumn>
+                  <HorAlignment>Center</HorAlignment>
+                  <Name>Image1</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Stretch>True</Stretch>
+                  <VertAlignment>Center</VertAlignment>
+                </Image1>
+                <Text5 Ref="13" type="Text" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>12.6,1.2,4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text5</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.Executers}</Text>
+                  <TextBrush>Black</TextBrush>
+                </Text5>
+                <Text6 Ref="14" type="Text" isKey="true">
+                  <Border>Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>16.6,1.2,2.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text6</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>:مسئول اجرایی</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text6>
+                <Text9 Ref="15" type="Text" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>5.6,0,11,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text9</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.CompanyName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Text9>
+                <Text10 Ref="16" type="Text" isKey="true">
+                  <Border>Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>16.6,0,2.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text10</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>:نام شرکت </Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text10>
+                <Text11 Ref="17" type="Text" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>12.6,0.6,4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text11</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.ReceptionDate}</Text>
+                  <TextBrush>Black</TextBrush>
+                </Text11>
+                <Text12 Ref="18" type="Text" isKey="true">
+                  <Border>Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>16.6,0.6,2.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text12</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>:دریافت نمونه</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text12>
+                <Text13 Ref="19" type="Text" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>6.2,0.6,4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Guid>d425804458b14c6cb28598220bb7654c</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text13</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.Delivery}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </Text13>
+                <Text14 Ref="20" type="Text" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>10.2,0.6,2.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Guid>5cb5d4d2d9234f1c8134a84622f81488</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text14</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>:تحویل نمونه</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text14>
+                <Text15 Ref="21" type="Text" isKey="true">
+                  <Brush>[219:238:243]</Brush>
+                  <ClientRectangle>15,1.8,1.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text15</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.NumberOfTests}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text15>
+                <Text16 Ref="22" type="Text" isKey="true">
+                  <Border>Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[219:238:243]</Brush>
+                  <ClientRectangle>16.6,1.8,2.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text16</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>:تعداد</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text16>
+                <Text18 Ref="23" type="Text" isKey="true">
+                  <Brush>[219:238:243]</Brush>
+                  <ClientRectangle>10.4,1.8,2.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Guid>44e15d1cc6bb45f48e6d9a877338992d</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text18</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.PartNumber}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text18>
+                <Text19 Ref="24" type="Text" isKey="true">
+                  <Brush>[219:238:243]</Brush>
+                  <ClientRectangle>12.6,1.8,2.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Guid>339be282d99446c89c858bf09d0c8af8</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text19</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>شماره تنوع </Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text19>
+                <Text24 Ref="25" type="Text" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>5.6,2.4,9.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text24</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.LabName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text24>
+                <Text25 Ref="26" type="Text" isKey="true">
+                  <Border>Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>14.8,2.4,4.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Guid>e8bd97a306bd49ad80dfd74faecd2ad9</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text25</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>:آزمایشگاه های مورد درخواست</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text25>
+                <Text1 Ref="27" type="Text" isKey="true">
+                  <Brush>[219:229:241]</Brush>
+                  <ClientRectangle>0.2,3.2,16.4,1.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,7,Bold</Font>
+                  <Guid>3a95eedde1eb437e9ab55236fa4b2f31</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text1</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.Description}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <Type>DataColumn</Type>
+                </Text1>
+                <Text4 Ref="28" type="Text" isKey="true">
+                  <Border>Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[219:229:241]</Brush>
+                  <ClientRectangle>16.6,3.2,2.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Guid>201f01663a834ac2bc4d46f66dd87349</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text4</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>:توضیحات</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text4>
+                <Text17 Ref="29" type="Text" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>11.4,1.2,1.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Guid>6eeb8a5a3ac748fd882165aad85dfd3b</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text17</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>:رابط</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text17>
+                <Text22 Ref="30" type="Text" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>6.2,1.2,5.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Mitra,11,Bold</Font>
+                  <Guid>6f8359f9d3ca438c8bbb8a1e2bc7e14b</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text22</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="11" />
+                  <Text>{Test_Azmun.ConnectorId}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </Text22>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Name>Panel1</Name>
+              <Page isRef="5" />
+              <Parent isRef="8" />
+            </Panel1>
+            <Text21 Ref="31" type="Text" isKey="true">
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>6,0.8,7.2,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Mitra,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="5" />
+              <Parent isRef="8" />
+              <Text>{Test_Azmun.MasterName}
+{IIF(Test_Azmun.StepByStep==true,"آزمون مرحله به مرحله می باشد","")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text7 Ref="32" type="Text" isKey="true">
+              <Border>Top;Black;1;Solid;False;4;Black</Border>
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>13.8,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Mitra,14,Bold</Font>
+              <Guid>4dabb46a1ba647e5b2c727ec3fd86f80</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="5" />
+              <Parent isRef="8" />
+              <Text>{Test_Azmun.ContractNo}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text7>
+            <Text8 Ref="33" type="Text" isKey="true">
+              <Border>Top, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>16.2,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Mitra,14,Bold</Font>
+              <Guid>ddeeaf6095f745a18b85e1bdff9e777e</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="5" />
+              <Parent isRef="8" />
+              <Text>:شماره قرارداد</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text23 Ref="34" type="Text" isKey="true">
+              <Border>Top, Left;Black;1;Solid;False;4;Black</Border>
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>0,0,5.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Mitra,14,Bold</Font>
+              <Guid>f0788b38e10d4a7489f75ad6c3ba6562</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="5" />
+              <Parent isRef="8" />
+              <Text>تخریب  : {IIF(Test_Azmun.Destruct==1,"شود","نشود")}
+
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text23>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>Test_Azmun</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>e964dff1fa8d41e0a31d1506f8a201ff</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page2</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="35" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page2>
+  </Pages>
+  <PrinterSettings Ref="36" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>11/23/2023 7:52:18 AM</ReportChanged>
+  <ReportCreated>4/5/2014 4:12:20 PM</ReportCreated>
+  <ReportFile>C:\Source\Laboratory\Laboratory\Main\Report\Report2.mrt</ReportFile>
+  <ReportGuid>83635fca284e44949a57f1aa5e9fdcd6</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2013.2.1612</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

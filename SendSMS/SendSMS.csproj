@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE68706F-8CCC-4C0A-9E98-687B45EE8174}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SendSMS</RootNamespace>
+    <AssemblyName>SendSMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Email, Version=3.7.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\Workspaces\Laboratory\Aspose.Total_for_.NET_DLL_2014-01-23_2\net4.0\Aspose.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.PDF, Version=8.8.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Aspose\Aspose.PDF_for_.NET_v19.1.0_(03_Jan_2019)\Aspose.PDF for .NET v19.1.0 (03 Jan 2019)\lib\net4.0\Aspose.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=13.12.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Aspose\Aspose.Words_for_.NET_v19.1.0_(26_Dec_2018)_+_Xamarin_Edition\Aspose.Words for .NET v19.1.0 (26 Dec 2018) + Xamarin Edition\lib\net40\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=13.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telegram.Bot.13.2.1\lib\netstandard1.1\Telegram.Bot.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InterFace\Classes\BillsInformal.cs" />
+    <Compile Include="InterFace\Classes\EmailMarketingList.cs" />
+    <Compile Include="InterFace\Classes\Marketing.cs" />
+    <Compile Include="InterFace\Classes\Bills.cs" />
+    <Compile Include="InterFace\Classes\CheckSms.cs" />
+    <Compile Include="InterFace\Classes\contractinfoForEmailOfBillLList.cs" />
+    <Compile Include="InterFace\Classes\ContractInfoList.cs" />
+    <Compile Include="InterFace\Classes\Cost.cs" />
+    <Compile Include="InterFace\Classes\DrawTable.cs" />
+    <Compile Include="InterFace\Classes\EmailOfCast.cs" />
+    <Compile Include="InterFace\Classes\EmailOfCostDetail.cs" />
+    <Compile Include="InterFace\Classes\GetDocumentForPrintWithSMS.cs" />
+    <Compile Include="InterFace\Classes\InvalidMessage.cs" />
+    <Compile Include="InterFace\Classes\MakeCostDetailHtml.cs" />
+    <Compile Include="InterFace\Classes\MakeCostHtml.cs" />
+    <Compile Include="InterFace\Classes\MasterBillForEmailList.cs" />
+    <Compile Include="InterFace\Classes\PartsInfoList.cs" />
+    <Compile Include="InterFace\Classes\PartsMasterSendEmailWithSMS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InterFace\Classes\ReturnNotSendSMS.cs" />
+    <Compile Include="InterFace\Classes\SendOfStatus.cs" />
+    <Compile Include="InterFace\Classes\SendReports.cs" />
+    <Compile Include="InterFace\Classes\SurvayBillForEmailBillList.cs" />
+    <Compile Include="InterFace\Classes\SurvayCostForEmailList.cs" />
+    <Compile Include="InterFace\Classes\SurvayDebtorCustomerForEmailReports.cs" />
+    <Compile Include="InterFace\Classes\SurvayDebtorCustomerForEmailReportsList.cs" />
+    <Compile Include="InterFace\Classes\TestInfoList.cs" />
+    <Compile Include="InterFace\Classes\Utility.cs" />
+    <Compile Include="InterFace\Message.cs" />
+    <Compile Include="InterFace\MessageInterFace.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GetSms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SendSms_V5\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\cost_letter.docx" />
+    <None Include="Resources\cost_letterpartsmasterwithheader.docx" />
+    <None Include="Resources\صورت حساب فروش docx.docx" />
+    <None Include="Resources\صورت حساب فروش غیر رسمی.docx" />
+    <None Include="Resources\نامه XRF.doc" />
+    <None Include="Resources\نامه xrf.docx" />
+    <None Include="Resources\نامه پلیمر.docx" />
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.GetCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.GetFirstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.GetForwardUrlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.GetLastResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.GetNextResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.GetPeriorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.ListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\ConsoleApplication5.GetSms.MessageReceived.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetSms\Inboxservice.wsdl" />
+    <None Include="Service References\SendSms_V5\BoxService.wsdl" />
+    <None Include="Service References\SendSms_V5\ConsoleApplication5.SendSms_V5.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SendSms_V5\ConsoleApplication5.SendSms_V5.GetMessagesStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SendSms_V5\ConsoleApplication5.SendSms_V5.GetMessageStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SendSms_V5\ConsoleApplication5.SendSms_V5.GetRemainingCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SendSms_V5\ConsoleApplication5.SendSms_V5.SendMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GetSms\" />
+    <WCFMetadataStorage Include="Service References\SendSms_V5\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetSms\Inboxservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetSms\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetSms\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetSms\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SendSms_V5\BoxService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SendSms_V5\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SendSms_V5\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SendSms_V5\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{f6369f66-ed6e-4e91-8d3a-89a3026892ea}</Project>
+      <Name>General</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

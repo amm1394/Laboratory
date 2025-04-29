@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.AsreFaraErtebat.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.AsreFaraErtebat.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.AsreFaraErtebat.com/">
+      <s:element name="Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResult" type="tns:MessageReceived" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MessageReceived">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="From" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CharCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsUnicode" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNext">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNextResult" type="tns:MessageReceived" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPerior">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPeriorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPeriorResult" type="tns:MessageReceived" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFirstResult" type="tns:MessageReceived" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLast">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastResult" type="tns:MessageReceived" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListResult" type="tns:ArrayOfMessageReceived" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMessageReceived">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MessageReceived" nillable="true" type="tns:MessageReceived" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetForwardUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetForwardUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetForwardUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Get" />
+  </wsdl:message>
+  <wsdl:message name="GetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNextSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNext" />
+  </wsdl:message>
+  <wsdl:message name="GetNextSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNextResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPeriorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPerior" />
+  </wsdl:message>
+  <wsdl:message name="GetPeriorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPeriorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirst" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirstResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLast" />
+  </wsdl:message>
+  <wsdl:message name="GetLastSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCount" />
+  </wsdl:message>
+  <wsdl:message name="GetCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListSoapIn">
+    <wsdl:part name="parameters" element="tns:List" />
+  </wsdl:message>
+  <wsdl:message name="ListSoapOut">
+    <wsdl:part name="parameters" element="tns:ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetForwardUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetForwardUrl" />
+  </wsdl:message>
+  <wsdl:message name="GetForwardUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetForwardUrlResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InboxServiceSoap">
+    <wsdl:operation name="Get">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves a message from the inbox.&lt;br /&gt;The following prameters are supported:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Username&lt;/b&gt;: Specifies the username of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Password&lt;/b&gt;: Specifies the password of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;ID&lt;/b&gt;: Specifies the id of the message to retrieve.&lt;li&gt;&lt;b&gt;&lt;i&gt;Return Value&lt;/i&gt;&lt;/b&gt;: A meassage type value. Returns &lt;i&gt;Null&lt;/i&gt; if there is no message.&lt;/li&gt;&lt;/ul&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetSoapIn" />
+      <wsdl:output message="tns:GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNext">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves the next message from the inbox.&lt;br /&gt;The following prameters are supported:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Username&lt;/b&gt;: Specifies the username of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Password&lt;/b&gt;: Specifies the password of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;To&lt;/b&gt;: Specifies the receiver number of the message. &lt;i&gt;Null&lt;/i&gt; or empty string means receiver number is not specified.&lt;/li&gt;&lt;li&gt;&lt;b&gt;ID&lt;/b&gt;: Specifies this message was located after the message that has specified by id.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;i&gt;Return Value&lt;/i&gt;&lt;/b&gt;: A meassage type value. Returns &lt;i&gt;Null&lt;/i&gt; if there is no message.&lt;/li&gt;&lt;/ul&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetNextSoapIn" />
+      <wsdl:output message="tns:GetNextSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerior">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves the previous message from the inbox.&lt;br /&gt;The following prameters are supported:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Username&lt;/b&gt;: Specifies the username of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Password&lt;/b&gt;: Specifies the password of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;To&lt;/b&gt;: Specifies the receiver number of the message. &lt;i&gt;Null&lt;/i&gt; or empty string means receiver number is not specified.&lt;/li&gt;&lt;li&gt;&lt;b&gt;ID&lt;/b&gt;: Specifies this message was located befor the message that has specified by id.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;i&gt;Return Value&lt;/i&gt;&lt;/b&gt;: A meassage type value. Returns &lt;i&gt;Null&lt;/i&gt; if there is no message.&lt;/li&gt;&lt;/ul&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetPeriorSoapIn" />
+      <wsdl:output message="tns:GetPeriorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirst">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves the first message from the inbox.&lt;br /&gt;The following prameters are supported:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Username&lt;/b&gt;: Specifies the username of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Password&lt;/b&gt;: Specifies the password of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;To&lt;/b&gt;: Specifies the receiver number of the message. &lt;i&gt;Null&lt;/i&gt; or empty string means receiver number is not specified.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;i&gt;Return Value&lt;/i&gt;&lt;/b&gt;: A meassage type value. Returns &lt;i&gt;Null&lt;/i&gt; if there is no message.&lt;/li&gt;&lt;/ul&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetFirstSoapIn" />
+      <wsdl:output message="tns:GetFirstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLast">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves the last message from the inbox.&lt;br /&gt;The following prameters are supported:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Username&lt;/b&gt;: Specifies the username of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Password&lt;/b&gt;: Specifies the password of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;To&lt;/b&gt;: Specifies the receiver number of the message. &lt;i&gt;Null&lt;/i&gt; or empty string means receiver number is not specified.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;i&gt;Return Value&lt;/i&gt;&lt;/b&gt;: A meassage type value. Returns &lt;i&gt;Null&lt;/i&gt; if there is no message.&lt;/li&gt;&lt;/ul&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetLastSoapIn" />
+      <wsdl:output message="tns:GetLastSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calculates total number of messages in the inbox.&lt;br /&gt;The following prameters are supported:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Username&lt;/b&gt;: Specifies the username of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Password&lt;/b&gt;: Specifies the password of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;To&lt;/b&gt;: Specifies the receiver number of the message. &lt;i&gt;Null&lt;/i&gt; or empty string means receiver number is not specified.&lt;/li&gt;&lt;li&gt;&lt;b&gt;ID&lt;/b&gt;: Specifies the location of the calculation. &lt;i&gt;0&lt;/i&gt; or negative values means calculate all the messages. The positive values means calculates all messages that located after the specified message id.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;i&gt;Return Value&lt;/i&gt;&lt;/b&gt;: An integer value that indicates the number of messages.&lt;/li&gt;&lt;/ul&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCountSoapIn" />
+      <wsdl:output message="tns:GetCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves an array of messages from the inbox.&lt;br /&gt;The following prameters are supported:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Username&lt;/b&gt;: Specifies the username of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Password&lt;/b&gt;: Specifies the password of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;To&lt;/b&gt;: Specifies the receiver number of the message. &lt;i&gt;Null&lt;/i&gt; or empty string means receiver number is not specified.&lt;/li&gt;&lt;li&gt;&lt;b&gt;ID&lt;/b&gt;: Specifies the location of the list. &lt;i&gt;0&lt;/i&gt; or negative values means list from the first page. The positive values means list the page that located after the specified message id.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Count&lt;/b&gt;: Specifies the maximum item of the array. The valid range is &lt;i&gt;0&lt;/i&gt;..&lt;i&gt;100&lt;/i&gt;. Other values means &lt;i&gt;100&lt;/i&gt;.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;i&gt;Return Value&lt;/i&gt;&lt;/b&gt;: An array of the meassage type that has &lt;i&gt;0&lt;/i&gt;..&lt;i&gt;100&lt;/i&gt; items.&lt;/li&gt;&lt;/ul&gt;</wsdl:documentation>
+      <wsdl:input message="tns:ListSoapIn" />
+      <wsdl:output message="tns:ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForwardUrl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves an array of messages from the inbox.&lt;br /&gt;The following prameters are supported:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Username&lt;/b&gt;: Specifies the username of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Password&lt;/b&gt;: Specifies the password of the inbox account.&lt;/li&gt;&lt;li&gt;&lt;b&gt;To&lt;/b&gt;: Specifies the receiver number of the message. &lt;i&gt;Null&lt;/i&gt; or empty string means receiver number is not specified.&lt;/li&gt;&lt;li&gt;&lt;b&gt;ID&lt;/b&gt;: Specifies the location of the list. &lt;i&gt;0&lt;/i&gt; or negative values means list from the first page. The positive values means list the page that located after the specified message id.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Count&lt;/b&gt;: Specifies the maximum item of the array. The valid range is &lt;i&gt;0&lt;/i&gt;..&lt;i&gt;100&lt;/i&gt;. Other values means &lt;i&gt;100&lt;/i&gt;.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;i&gt;Return Value&lt;/i&gt;&lt;/b&gt;: An array of the meassage type that has &lt;i&gt;0&lt;/i&gt;..&lt;i&gt;100&lt;/i&gt; items.&lt;/li&gt;&lt;/ul&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetForwardUrlSoapIn" />
+      <wsdl:output message="tns:GetForwardUrlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InboxServiceSoap" type="tns:InboxServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get">
+      <soap:operation soapAction="http://www.AsreFaraErtebat.com/Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNext">
+      <soap:operation soapAction="http://www.AsreFaraErtebat.com/GetNext" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerior">
+      <soap:operation soapAction="http://www.AsreFaraErtebat.com/GetPerior" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirst">
+      <soap:operation soapAction="http://www.AsreFaraErtebat.com/GetFirst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLast">
+      <soap:operation soapAction="http://www.AsreFaraErtebat.com/GetLast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <soap:operation soapAction="http://www.AsreFaraErtebat.com/GetCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List">
+      <soap:operation soapAction="http://www.AsreFaraErtebat.com/List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForwardUrl">
+      <soap:operation soapAction="http://www.AsreFaraErtebat.com/GetForwardUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InboxServiceSoap12" type="tns:InboxServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get">
+      <soap12:operation soapAction="http://www.AsreFaraErtebat.com/Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNext">
+      <soap12:operation soapAction="http://www.AsreFaraErtebat.com/GetNext" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerior">
+      <soap12:operation soapAction="http://www.AsreFaraErtebat.com/GetPerior" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirst">
+      <soap12:operation soapAction="http://www.AsreFaraErtebat.com/GetFirst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLast">
+      <soap12:operation soapAction="http://www.AsreFaraErtebat.com/GetLast" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <soap12:operation soapAction="http://www.AsreFaraErtebat.com/GetCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List">
+      <soap12:operation soapAction="http://www.AsreFaraErtebat.com/List" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForwardUrl">
+      <soap12:operation soapAction="http://www.AsreFaraErtebat.com/GetForwardUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InboxService">
+    <wsdl:port name="InboxServiceSoap" binding="tns:InboxServiceSoap">
+      <soap:address location="http://www.afe.ir/WebService/Inboxservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InboxServiceSoap12" binding="tns:InboxServiceSoap12">
+      <soap12:address location="http://www.afe.ir/WebService/Inboxservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

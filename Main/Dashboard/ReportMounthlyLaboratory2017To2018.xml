@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="fa-IR">
+  <Title Text="گزارش درآمد آزمایشگاها - سال 96" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="sql-1_LaboratoryRASF_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="sql-1" />
+          <Parameter Name="database" Value="LaboratoryRASF" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="AliReza23280" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="ReportMounthlyLaboratory2017To2018_Select">
+        <ProcName>ReportMounthlyLaboratory2017To2018_Select</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="ReportMounthlyLaboratory2017To2018_Select">
+            <Field Name="LaboratoryName" Type="String" />
+            <Field Name="Farvardin" Type="Int64" />
+            <Field Name="Ordibehesht" Type="Int64" />
+            <Field Name="Khordad" Type="Int64" />
+            <Field Name="Tir" Type="Int64" />
+            <Field Name="Mordad" Type="Int64" />
+            <Field Name="Shahriver" Type="Int64" />
+            <Field Name="Mehr" Type="Int64" />
+            <Field Name="Aban" Type="Int64" />
+            <Field Name="Azar" Type="Int64" />
+            <Field Name="Dey" Type="Int64" />
+            <Field Name="Bahman" Type="Int64" />
+            <Field Name="Esfand" Type="Int64" />
+            <Field Name="Kol" Type="Int64" />
+            <Field Name="Darsad" Type="Decimal" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="تیر" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select">
+      <DataItems>
+        <Measure DataMember="Tir" DefaultId="DataItem1" />
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem2" Name="اردیبهشت" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select">
+      <DataItems>
+        <Measure DataMember="Ordibehesht" DefaultId="DataItem1" />
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem5" Name="خرداد" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select">
+      <DataItems>
+        <Measure DataMember="Khordad" DefaultId="DataItem1" />
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem7" Name="فروردین" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select">
+      <DataItems>
+        <Measure DataMember="Farvardin" DefaultId="DataItem1" />
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem3" Name="مرداد" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select">
+      <DataItems>
+        <Measure DataMember="Mordad" DefaultId="DataItem1" />
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem4" Name="آبان" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select">
+      <DataItems>
+        <Measure DataMember="Aban" DefaultId="DataItem0" />
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem1" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem6" Name="مهر" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select">
+      <DataItems>
+        <Measure DataMember="Mehr" DefaultId="DataItem0" />
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem1" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem8" Name="شهریور" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select">
+      <DataItems>
+        <Measure DataMember="Shahriver" DefaultId="DataItem1" />
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select" Color="-11468981">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="LaboratoryName" />
+          <Value Type="System.String" Value="مکانیکی" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory2017To2018_Select" Color="-2676027">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="LaboratoryName" />
+          <Value Type="System.String" Value="خوردگی" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="49.931787175989086">
+        <LayoutGroup Orientation="Vertical" Weight="24.970553592461719">
+          <LayoutItem DashboardItem="chartDashboardItem1" Weight="24.970553592461719" />
+          <LayoutItem DashboardItem="chartDashboardItem4" Weight="24.970553592461719" />
+        </LayoutGroup>
+        <LayoutGroup Orientation="Vertical" Weight="24.970553592461719">
+          <LayoutItem DashboardItem="chartDashboardItem5" Weight="24.970553592461719" />
+          <LayoutItem DashboardItem="chartDashboardItem6" Weight="24.970553592461719" />
+        </LayoutGroup>
+        <LayoutGroup Orientation="Vertical" Weight="24.970553592461719">
+          <LayoutItem DashboardItem="chartDashboardItem2" Weight="24.970553592461719" />
+          <LayoutItem DashboardItem="chartDashboardItem8" Weight="24.970553592461719" />
+        </LayoutGroup>
+        <LayoutGroup Orientation="Vertical" Weight="25.088339222614842">
+          <LayoutItem DashboardItem="chartDashboardItem7" Weight="25.088339222614842" />
+          <LayoutItem DashboardItem="chartDashboardItem3" Weight="25.088339222614842" />
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

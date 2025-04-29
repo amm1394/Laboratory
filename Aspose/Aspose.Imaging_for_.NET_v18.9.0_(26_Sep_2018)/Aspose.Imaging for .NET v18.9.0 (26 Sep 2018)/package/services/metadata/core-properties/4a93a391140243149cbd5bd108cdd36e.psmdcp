@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties">
+  <dc:creator>Aspose</dc:creator>
+  <dc:description>Aspose.Imaging for .NET is an imaging library that lets developers create, edit, draw or convert images in their .NET applications. Aspose.Imaging provides features that go beyond the native capabilities of the development platform. It works independent of other applications and although Aspose.Imaging allows you to save to Adobe PhotoShop® format (PSD), you do not need PhotoShop on the machine.</dc:description>
+  <dc:identifier>Aspose.Imaging</dc:identifier>
+  <version>18.9</version>
+  <keywords>Aspose.Imaging GIF JPEG JPG JPEG2000 LosslessJPEG JPEG-LS PNG BMP TIF PSD Layers Images Drawing Graphics Interlaced LZW CCITT3 CCITT4 RLE compression Lossless TiffFrame Djvu WebP DICOM Emf Wmf DNG SVG ODG EPS</keywords>
+  <lastModifiedBy>NuGet, Version=4.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35;Microsoft Windows NT 6.2.9200.0;.NET Framework 4.6</lastModifiedBy>
+</coreProperties>

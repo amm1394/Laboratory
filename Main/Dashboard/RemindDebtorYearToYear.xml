@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="fa-IR">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="sql-1_LaboratoryRASF_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="sql-1" />
+          <Parameter Name="database" Value="LaboratoryRASF" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="AliReza23280" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="BedBesCompaniesBaseFinancialYear_View">
+        <Tables>
+          <Table Name="BedBesCompaniesBaseFinancialYear_View" Meta="30|30|125|153" />
+        </Tables>
+        <Columns>
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="debtor" Aggregate="Sum" Alias="Sum_debtor" />
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="FinancialYear" />
+        </Columns>
+        <Grouping>
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="FinancialYear" />
+        </Grouping>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="BedBesCompaniesBaseFinancialYear_View">
+            <Field Name="Sum_debtor" Type="Int64" />
+            <Field Name="FinancialYear" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+    <SqlDataSource ComponentName="dashboardSqlDataSource2">
+      <Name>SQL Data Source 2</Name>
+      <Connection Name="sql-1_LaboratoryRASF_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="sql-1" />
+          <Parameter Name="database" Value="LaboratoryRASF" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="AliReza23280" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="BedBesCompaniesBaseFinancialYear_View">
+        <Tables>
+          <Table Name="BedBesCompaniesBaseFinancialYear_View" Meta="30|30|125|153" />
+        </Tables>
+        <Columns>
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="Remind" Aggregate="Sum" Alias="Sum_Remind" />
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="FinancialYear" />
+        </Columns>
+        <Grouping>
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="FinancialYear" />
+        </Grouping>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 2">
+          <View Name="BedBesCompaniesBaseFinancialYear_View">
+            <Field Name="Sum_Remind" Type="Int64" />
+            <Field Name="FinancialYear" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+    <SqlDataSource ComponentName="dashboardSqlDataSource3">
+      <Name>SQL Data Source 3</Name>
+      <Connection Name="sql-1_LaboratoryRASF_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="sql-1" />
+          <Parameter Name="database" Value="LaboratoryRASF" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="AliReza23280" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="BedBesCompaniesBaseFinancialYear_View">
+        <Tables>
+          <Table Name="BedBesCompaniesBaseFinancialYear_View" Meta="30|30|125|153" />
+          <Table Name="Companies_Base" Meta="185|30|125|761" />
+          <Relation Type="LeftOuter" Parent="BedBesCompaniesBaseFinancialYear_View" Nested="Companies_Base">
+            <KeyColumn Parent="CompaniesCode" Nested="CompaniesCode" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="Remind" Aggregate="Sum" Alias="Sum_Remind" />
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="FinancialYear" />
+        </Columns>
+        <Grouping>
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="FinancialYear" />
+        </Grouping>
+        <Filter>[Companies_Base.CooperationCode] = {47e3b7d4-c86c-43f1-9220-79c521ddd967}</Filter>
+        <GroupFilter></GroupFilter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 3">
+          <View Name="BedBesCompaniesBaseFinancialYear_View">
+            <Field Name="Sum_Remind" Type="Int64" />
+            <Field Name="FinancialYear" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+    <SqlDataSource ComponentName="dashboardSqlDataSource4">
+      <Name>SQL Data Source 4</Name>
+      <Connection Name="sql-1_LaboratoryRASF_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="sql-1" />
+          <Parameter Name="database" Value="LaboratoryRASF" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="AliReza23280" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="BedBesCompaniesBaseFinancialYear_View">
+        <Tables>
+          <Table Name="BedBesCompaniesBaseFinancialYear_View" Meta="30|30|125|153" />
+          <Table Name="Companies_Base" Meta="185|30|125|761" />
+          <Relation Type="Inner" Parent="BedBesCompaniesBaseFinancialYear_View" Nested="Companies_Base">
+            <KeyColumn Parent="CompaniesCode" Nested="CompaniesCode" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="Remind" Aggregate="Sum" Alias="Sum_Remind" />
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="FinancialYear" />
+        </Columns>
+        <Grouping>
+          <Column Table="BedBesCompaniesBaseFinancialYear_View" Name="FinancialYear" />
+        </Grouping>
+        <Filter>[Companies_Base.CooperationCode] &lt;&gt; {47e3b7d4-c86c-43f1-9220-79c521ddd967}</Filter>
+        <GroupFilter></GroupFilter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 4">
+          <View Name="BedBesCompaniesBaseFinancialYear_View">
+            <Field Name="Sum_Remind" Type="Int64" />
+            <Field Name="FinancialYear" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="فروش" DataSource="dashboardSqlDataSource1" DataMember="BedBesCompaniesBaseFinancialYear_View">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="FinancialYear" DefaultId="DataItem1" />
+        <Measure DataMember="Sum_debtor" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="3" Unit="Thousands" IncludeGroupSeparator="true" CurrencyCultureName="fa-IR" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <SecondaryAxisY Visible="false" TitleVisible="false" Title="Sum_debtor (Sum)" />
+          <Series>
+            <Simple PlotOnSecondaryAxis="true">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions Visible="true" Orientation="RotateLeft" OverlappingMode="Reposition" Position="Inside" ShowForZeroValues="true" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" OutsidePosition="TopLeftHorizontal" />
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <Chart ComponentName="chartDashboardItem2" Name="مانده نقدی" DataSource="dashboardSqlDataSource3" DataMember="BedBesCompaniesBaseFinancialYear_View">
+      <DataItems>
+        <Dimension DataMember="FinancialYear" DefaultId="DataItem1" />
+        <Measure DataMember="Sum_Remind" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="3" Unit="Thousands" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Visible="false" />
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions Visible="true" Orientation="RotateLeft" OverlappingMode="Reposition" Position="Inside" ShowForZeroValues="true" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <Chart ComponentName="chartDashboardItem3" Name="مانده" DataSource="dashboardSqlDataSource2" DataMember="BedBesCompaniesBaseFinancialYear_View">
+      <DataItems>
+        <Dimension DataMember="FinancialYear" DefaultId="DataItem1" />
+        <Measure DataMember="Sum_Remind" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="3" Unit="Thousands" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Visible="false" ShowGridLines="false" />
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions Visible="true" Orientation="RotateLeft" OverlappingMode="Reposition" Position="Inside" ShowForZeroValues="true" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <Chart ComponentName="chartDashboardItem4" Name="مانده اعتباری" DataSource="dashboardSqlDataSource4" DataMember="BedBesCompaniesBaseFinancialYear_View">
+      <DataItems>
+        <Dimension DataMember="FinancialYear" DefaultId="DataItem1" />
+        <Measure DataMember="Sum_Remind" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="3" Unit="Thousands" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Visible="false" />
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions Visible="true" Orientation="RotateLeft" OverlappingMode="Reposition" Position="Inside" ShowForZeroValues="true" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" />
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="50">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="49.903288201160542" />
+        <LayoutItem DashboardItem="chartDashboardItem3" Weight="50.096711798839458" />
+      </LayoutGroup>
+      <LayoutGroup Weight="50">
+        <LayoutItem DashboardItem="chartDashboardItem2" Weight="49.903288201160542" />
+        <LayoutItem DashboardItem="chartDashboardItem4" Weight="50.096711798839458" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties">
+  <dc:creator>Aspose</dc:creator>
+  <dc:description>Aspose.PDF for .NET is a PDF document creation and manipulation component that enables your .NET applications to read, write and manipulate existing PDF documents without using Adobe Acrobat. It also allows you to create forms and manage form fields embedded in a PDF document. This component is written in managed C# and it allows developers to add PDF creation and manipulation functionality to their Microsoft .NET applications (WinForms, ASP.NET and .NET Compact Framework).
+        Aspose.PDF for .NET is affordable and offers an incredible wealth of features including PDF compression options; table creation and manipulation; support for graph objects; extensive hyperlink functionality; extended security controls; custom font handling; integration with data sources; add or remove bookmarks; create table of contents; add, update, delete attachments and annotations; import or export PDF form data; add, replace or remove text and images; split, concatenate, extract or inset pages; transform pages to image; print PDF documents and much more.</dc:description>
+  <dc:identifier>Aspose.PDF</dc:identifier>
+  <version>19.1</version>
+  <keywords>Aspose.Pdf PDF XFA XPS TIFF PCL SVG HTML XML XSL-FO FDF XFDF PDF/A form Portfolio EPUB PSD to XLS PDF-to-DOC</keywords>
+  <lastModifiedBy>NuGet, Version=4.1.0.2450, Culture=neutral, PublicKeyToken=31bf3856ad364e35;Microsoft Windows NT 6.1.7601 Service Pack 1;.NET Framework 4.5</lastModifiedBy>
+</coreProperties>

@@ -1,0 +1,2482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6369F66-ED6E-4E91-8D3A-89A3026892EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RASF.General</RootNamespace>
+    <AssemblyName>RASF.General</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=7.7.1.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\Workspaces\Laboratory\Aspose.Total_for_.NET_DLL_2014-01-23_2\net2.0\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Email, Version=3.7.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\Workspaces\Laboratory\Main\bin\Debug\Aspose.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.PDF, Version=19.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\Aspose.PDF for .NET v19.3.0 (06 Mar 2019)\lib\net4.0\Aspose.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=13.12.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Aspose\Aspose.Words_for_.NET_v19.1.0_(26_Dec_2018)_+_Xamarin_Edition\Aspose.Words for .NET v19.1.0 (26 Dec 2018) + Xamarin Edition\lib\net40\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.Common.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="MediaFoundation, Version=3.1.0.32450, Culture=neutral, PublicKeyToken=36fa660e1d6ebf8d, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Microsoft.AnalysisServices.AdomdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MSXML, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Microsoft.MSXML.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office15\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Toolkit.Uwp.Notifications, Version=7.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Microsoft.Toolkit.Uwp.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="RadControlSpy, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\RadControlSpy.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base">
+      <HintPath>..\..\..\..\..\Documents\knabavi\Stimulsoft Reports.Net 2013.2.1700\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design">
+      <HintPath>..\..\..\..\..\Documents\knabavi\Stimulsoft Reports.Net 2013.2.1700\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report">
+      <HintPath>..\..\..\..\..\Documents\knabavi\Stimulsoft Reports.Net 2013.2.1700\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design">
+      <HintPath>..\..\..\..\..\Documents\knabavi\Stimulsoft Reports.Net 2013.2.1700\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices.AccountManagement">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.ChartView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PdfViewer, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.PdfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.PivotGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadChart, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RadChart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDiagram, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RadDiagram.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RadDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadMap, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RadMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RadMarkupEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadSpreadsheet, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RadSpreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadToastNotification.Design, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RadToastNotification.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadWebCam, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RadWebCam.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.RichTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.SpellChecker, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.SyntaxEditor, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.SyntaxEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Aqua.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Crystal, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Crystal.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.CrystalDark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Desert, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Desert.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.MaterialBlueGrey.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialPink, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.MaterialPink.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.MaterialTeal.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Black, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Office2007Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Office2007Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Black, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Office2010Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Silver, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Office2010Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Office2013Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Office2013Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2019, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Office2019.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.TelerikMetro.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.TelerikMetroTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.VisualStudio2012Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.VisualStudio2012Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2022, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.VisualStudio2022.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows11, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Windows11.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows7, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Windows7.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.Themes.Windows8.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI.Design, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.WinControls.UI.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.CMapUtils, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.CMapUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.DrawingML, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.DrawingML.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Doc, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.MediaFoundation, Version=2024.1.304.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2024.1.305.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikData, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\TelerikData.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikExport, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\TelerikExport.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\packages\DockPanelSuite.2.9.0.0\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.FileSystem.v5.4">
+      <HintPath>..\Dll\Xceed.FileSystem.v5.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Zip.v5.4">
+      <HintPath>..\Dll\Xceed.Zip.v5.4.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AD\ADHelper.cs" />
+    <Compile Include="Attributes\DataAttribute.cs" />
+    <Compile Include="Attributes\ValidatorAttribute.cs" />
+    <Compile Include="Classes\CompressedFile.cs" />
+    <Compile Include="Classes\Compressor.cs" />
+    <Compile Include="Classes\CorrectString.cs" />
+    <Compile Include="Classes\GageSize.cs" />
+    <Compile Include="Classes\Global.cs" />
+    <Compile Include="Classes\BookMarks.cs" />
+    <Compile Include="Classes\OldMakePicture.cs" />
+    <Compile Include="Classes\OldMakePicture2.cs" />
+    <Compile Include="Classes\MakePictureReciept.cs" />
+    <Compile Include="Classes\MakePicture2Reciept.cs" />
+    <Compile Include="Classes\MakePicture2.cs" />
+    <Compile Include="Classes\MakePicture.cs" />
+    <Compile Include="Classes\SendEmailRecieptionPic.cs" />
+    <Compile Include="Classes\SendFax.cs" />
+    <Compile Include="Classes\SendEmail.cs" />
+    <Compile Include="Classes\Utility.cs" />
+    <Compile Include="Controls\Chart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GridEXPrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Save_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NumberBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UIStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\AcceptGrant.cs" />
+    <Compile Include="Data\Financiaccept.cs" />
+    <Compile Include="Data\NumberOfExecutersAmadesaziShab.cs" />
+    <Compile Include="Data\LightDesc.cs" />
+    <Compile Include="Data\HoldedBeforeFinancial.cs" />
+    <Compile Include="Data\AVGDailyProcessReport.cs" />
+    <Compile Include="Data\Csv_Contract.cs" />
+    <Compile Include="Data\Csv_Data.cs" />
+    <Compile Include="Data\WorkFlowDescriptionReport.cs" />
+    <Compile Include="Data\uncertainvariations.cs" />
+    <Compile Include="Data\CancelEnterMaster.cs" />
+    <Compile Include="Data\HasCdDetail.cs" />
+    <Compile Include="Data\HasCdMaster.cs" />
+    <Compile Include="Data\SendLetters.cs" />
+    <Compile Include="Data\CooperationGroup_TafahomName.cs" />
+    <Compile Include="Data\ReportOfRemindHaghighi.cs" />
+    <Compile Include="Data\RegisterNotInPersonPart.cs" />
+    <Compile Include="Data\TypesOfCostStatements.cs" />
+    <Compile Include="Data\MarketingReportFollowUp.cs" />
+    <Compile Include="Data\ComplaintType.cs" />
+    <Compile Include="Data\Complaint.cs" />
+    <Compile Include="Data\ReportSalesYearly.cs" />
+    <Compile Include="Data\Connector_PeapleRelated.cs" />
+    <Compile Include="Data\Resources.cs" />
+    <Compile Include="Data\Appointments.cs" />
+    <Compile Include="Data\TimeOfSem.cs" />
+    <Compile Include="Data\MessagingMarketing.cs" />
+    <Compile Include="Data\ProfileOfContractors.cs" />
+    <Compile Include="Data\Companies_PeopleRelated.cs" />
+    <Compile Include="Data\TrackingStatusMarketing.cs" />
+    <Compile Include="Data\MarketingActivity.cs" />
+    <Compile Include="Data\Parts_MasterDeclareCost.cs" />
+    <Compile Include="Data\Standard_Names.cs" />
+    <Compile Include="Data\Standard_Base.cs" />
+    <Compile Include="Data\MasterBillVoid.cs" />
+    <Compile Include="Data\RemindSeparatedbycustomer.cs" />
+    <Compile Include="Data\DetaiolOfReciept.cs" />
+    <Compile Include="Data\OrderStatusCompany.cs" />
+    <Compile Include="Data\NanoReports.cs" />
+    <Compile Include="Data\CashOrderStatus.cs" />
+    <Compile Include="Data\NotDestruct.cs" />
+    <Compile Include="Data\RecDuplicatePrint.cs" />
+    <Compile Include="Data\ReciepOfCustomer.cs" />
+    <Compile Include="Data\HasContracsLetter.cs" />
+    <Compile Include="Data\DetailOfNotRecieveFromContractors.cs" />
+    <Compile Include="Data\NotRecieveFromContractors.cs" />
+    <Compile Include="Data\AssignExecuters.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPiecesWestSide.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPiecesForLaboratoryWestSide.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPiecesForLaboratoryLargeSample.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPiecesForStoreLargeSample.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPiecesLargeSample.cs" />
+    <Compile Include="Data\WorkFlowDescription.cs" />
+    <Compile Include="Data\Parts_Tests_MasterForWorkFlow.cs" />
+    <Compile Include="Data\PartsMasterForWorkFlow.cs" />
+    <Compile Include="Data\ContractsForWorkFlow.cs" />
+    <Compile Include="Data\CalcLaboratoryCost.cs" />
+    <Compile Include="Data\CancelExitForEditReport.cs" />
+    <Compile Include="Data\CurrentWorkOfCompany.cs" />
+    <Compile Include="Data\ReportSendingInPerson.cs" />
+    <Compile Include="Data\Arl_Eleman.cs" />
+    <Compile Include="Data\Arl_Elements.cs" />
+    <Compile Include="Data\CultchStore.cs" />
+    <Compile Include="Data\ShowSaveCostPaper.cs" />
+    <Compile Include="Data\RemindDebtorYearToYear.cs" />
+    <Compile Include="Data\DarsadAndRemind.cs" />
+    <Compile Include="Data\MechanicalLabDelivery.cs" />
+    <Compile Include="Data\ViewSabtSamane.cs" />
+    <Compile Include="Data\CountTestOfLaboratory.cs" />
+    <Compile Include="Data\DebPayCompanies.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPiecesForStoreWestSide.cs" />
+    <Compile Include="Data\TahviliAmadesazi.cs" />
+    <Compile Include="Data\CompaniesConector.cs" />
+    <Compile Include="Data\Standards.cs" />
+    <Compile Include="Data\ContractsNotEnteredAzmoonAmadesazi.cs" />
+    <Compile Include="Data\ContractsNotEnteredAmadesazi.cs" />
+    <Compile Include="Data\OpenCloseBill.cs" />
+    <Compile Include="Data\CloseBill.cs" />
+    <Compile Include="Data\PartsMasterNotEnteredAzmoonAmadesazi.cs" />
+    <Compile Include="Data\PartsMasterNotEnteredAmadesazi.cs" />
+    <Compile Include="Data\ReportOfDaneshBonyan.cs" />
+    <Compile Include="Data\InspectorCompanyForContract.cs" />
+    <Compile Include="Data\RegisterNopayments.cs" />
+    <Compile Include="Data\Inspector.cs" />
+    <Compile Include="Data\CompanyOfInspect.cs" />
+    <Compile Include="Data\EmailMonthlyBillShow.cs" />
+    <Compile Include="Data\TestNameNotEnteredAzmoonAmadesazi.cs" />
+    <Compile Include="Data\WageofagencyPay.cs" />
+    <Compile Include="Data\AssignGroup.cs" />
+    <Compile Include="Data\ValidatorOfFinancial.cs" />
+    <Compile Include="Data\CompaniesOfDontGoBonyad2Month.cs" />
+    <Compile Include="Data\CancelEnterExitLab.cs" />
+    <Compile Include="Data\SampleOfFinancialSanads.cs" />
+    <Compile Include="Data\FollowUpIsHoldContract.cs" />
+    <Compile Include="Data\ConnectorOfCompanies.cs" />
+    <Compile Include="Data\KarkardCooperationWithAgency.cs" />
+    <Compile Include="Data\KarkardCooperation.cs" />
+    <Compile Include="Data\ReceiptDemandForCompanies.cs" />
+    <Compile Include="Data\Redact.cs" />
+    <Compile Include="Data\EarninigOfAgency.cs" />
+    <Compile Include="Data\RegisterMarking.cs" />
+    <Compile Include="Data\MonthlyReport.cs" />
+    <Compile Include="Data\CompaniesRefernt.cs" />
+    <Compile Include="Data\DetailOfReception.cs" />
+    <Compile Include="Data\DifferenceInvoiceContract.cs" />
+    <Compile Include="Data\ReportMounthlyLaboratory.cs" />
+    <Compile Include="Data\ShowSendMessage.cs" />
+    <Compile Include="Data\OutPutExecuters.cs" />
+    <Compile Include="Data\ViewTarrif.cs" />
+    <Compile Include="Data\New_Receipt.cs" />
+    <Compile Include="Data\ReportOfCreditCompany.cs" />
+    <Compile Include="Data\SentPartToContractorsReport.cs" />
+    <Compile Include="Data\SentPartToContractorsDetailReport.cs" />
+    <Compile Include="Data\EarnDeliveryDay.cs" />
+    <Compile Include="Data\Indicator.cs" />
+    <Compile Include="Data\CancelExitForEditInScience.cs" />
+    <Compile Include="Data\SentPartToContractors.cs" />
+    <Compile Include="Data\Contractors_MobilNum.cs" />
+    <Compile Include="Data\DailyProcessReportForLaboratory.cs" />
+    <Compile Include="Data\DetailOfSanad.cs" />
+    <Compile Include="Data\emailTest.cs" />
+    <Compile Include="Data\Reception_Pic.cs" />
+    <Compile Include="Data\ReceiveCheque.cs" />
+    <Compile Include="Data\DailyProcessReport.cs" />
+    <Compile Include="Data\PaymentAmount_Detail.cs" />
+    <Compile Include="Data\Payment_Assignment.cs" />
+    <Compile Include="Data\PaymentAmount_Master.cs" />
+    <Compile Include="Data\CopmanyPayment.cs" />
+    <Compile Include="Data\NumberOfExecutersOutput.cs" />
+    <Compile Include="Data\GenerateLabel.cs" />
+    <Compile Include="Data\PayMentType.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPiecesForLaboratory.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPiecesForStore.cs" />
+    <Compile Include="Data\ReportsOfEnterExitPieces.cs" />
+    <Compile Include="Data\EnterPiecesToLaboratory.cs" />
+    <Compile Include="Data\Part_Pic.cs" />
+    <Compile Include="Data\TestExecutersLaboratorys.cs" />
+    <Compile Include="Data\ReportOfPOGC.cs" />
+    <Compile Include="Data\ReportOfPOGCDetail.cs" />
+    <Compile Include="Data\Threemonthssales.cs" />
+    <Compile Include="Data\ContractBaseWithDiscount.cs" />
+    <Compile Include="Data\ShowDeliveryDateChange.cs" />
+    <Compile Include="Data\DeliveryDateChange.cs" />
+    <Compile Include="Data\SendEmailOfCostOfCustomer.cs" />
+    <Compile Include="Data\companyWorkFlowBaseOfPeymentCostomer.cs" />
+    <Compile Include="Data\OnceMeetOfBonyad.cs" />
+    <Compile Include="Data\PartsMasterEmptyPrintReport.cs" />
+    <Compile Include="Data\RequestOfContractorDoesnotSend.cs" />
+    <Compile Include="Data\RequestOfContractor.cs" />
+    <Compile Include="Data\Cancel_Contracts_IsHoldDetail.cs" />
+    <Compile Include="Data\Cancel_Contracts_IsHold.cs" />
+    <Compile Include="Data\Contracts_IsHold.cs" />
+    <Compile Include="Data\ChangeYear.cs" />
+    <Compile Include="Data\Laboratory_User.cs" />
+    <Compile Include="Data\SendMessage.cs" />
+    <Compile Include="Data\ShowVoidContracts.cs" />
+    <Compile Include="Data\contractinfoForEmailOfBill.cs" />
+    <Compile Include="Data\StandardData.cs" />
+    <Compile Include="Data\InsertStandard.cs" />
+    <Compile Include="Data\SendEmail.cs" />
+    <Compile Include="Data\Metal_Pic.cs" />
+    <Compile Include="Data\GetDocumentForPrint.cs" />
+    <Compile Include="Data\MasterTestPrintReport.cs" />
+    <Compile Include="Data\PartsMasterPrintReport.cs" />
+    <Compile Include="Data\ObservationReport.cs" />
+    <Compile Include="Data\BookMarks.cs" />
+    <Compile Include="Data\AddReport.cs" />
+    <Compile Include="Data\FinancialLaboratoryNumberOfTests.cs" />
+    <Compile Include="Data\LaboratoryReports.cs" />
+    <Compile Include="Data\DefinitionTemplate.cs" />
+    <Compile Include="Data\CreditCompanyWorkFlow.cs" />
+    <Compile Include="Data\FindBillNumber.cs" />
+    <Compile Include="Data\ContractsWithoutBills.cs" />
+    <Compile Include="Data\ContractsWasCompleted.cs" />
+    <Compile Include="Data\Insert_RecieptAmountSanad.cs" />
+    <Compile Include="Data\ReportingDelay.cs" />
+    <Compile Include="Data\Creditreportingcompanies.cs" />
+    <Compile Include="Data\HaghighiHoghughi.cs" />
+    <Compile Include="Data\Insert_Sand.cs" />
+    <Compile Include="Data\LaboratoryofFinancialConditionReport.cs" />
+    <Compile Include="Data\Executers.cs" />
+    <Compile Include="Data\VoidedContracts_.cs" />
+    <Compile Include="Data\VoidedContractsDescription.cs" />
+    <Compile Include="Data\ContractsenteredintotheLaboratory.cs" />
+    <Compile Include="Data\DeliveryDay.cs" />
+    <Compile Include="Data\Settledcontracts.cs" />
+    <Compile Include="Data\Billsissued.cs" />
+    <Compile Include="Data\Turnoverreached.cs" />
+    <Compile Include="Data\Theamountofdailyintake.cs" />
+    <Compile Include="Data\OfficeofFinancialConditionReport.cs" />
+    <Compile Include="Data\UsersMenu.cs" />
+    <Compile Include="Data\ReceiptAssignment.cs" />
+    <Compile Include="Data\EnterExitPieces.cs" />
+    <Compile Include="Data\Basket.cs" />
+    <Compile Include="Data\DebtorInvoice.cs" />
+    <Compile Include="Data\FinancialLaboratory.cs" />
+    <Compile Include="Data\AmountChart.cs" />
+    <Compile Include="Data\OfficesFinancial.cs" />
+    <Compile Include="Data\Theseparationofoffices.cs" />
+    <Compile Include="Data\MasterTestListCostPaper.cs" />
+    <Compile Include="Data\FindContractsCode.cs" />
+    <Compile Include="Data\RecieptHistory.cs" />
+    <Compile Include="Data\CompaniesCostPaper.cs" />
+    <Compile Include="Data\CompanyWorkFlow.cs" />
+    <Compile Include="Data\voidContract.cs" />
+    <Compile Include="Data\FindLetterNoPartsName.cs" />
+    <Compile Include="Data\PartsMasterNotEntered.cs" />
+    <Compile Include="Data\ContractsNotEntered.cs" />
+    <Compile Include="Data\TestNameNotEntered.cs" />
+    <Compile Include="Data\FindUsersLaboratory.cs" />
+    <Compile Include="Data\ValidateCredentials.cs" />
+    <Compile Include="Data\CostomerCost.cs" />
+    <Compile Include="Data\CreditorRemind.cs" />
+    <Compile Include="Data\CustomersCostGrid.cs" />
+    <Compile Include="Data\ReceiptAmountDetail.cs" />
+    <Compile Include="Data\ReceiptType.cs" />
+    <Compile Include="Data\DebtorCreditorContractBase.cs" />
+    <Compile Include="Data\DebtorCreditorCompanies.cs" />
+    <Compile Include="Data\ReceiptAmount_Master.cs" />
+    <Compile Include="Data\Contracts_CancelToExit.cs" />
+    <Compile Include="Data\MasterBillDetailBill.cs" />
+    <Compile Include="Data\Contracts_Base_Edit.cs" />
+    <Compile Include="Data\CreateContractNumber.cs" />
+    <Compile Include="Data\LaboratoryMachin.cs" />
+    <Compile Include="Data\ActiveNonActive.cs" />
+    <Compile Include="Data\AgencyMobileNum.cs" />
+    <Compile Include="Data\AgencyPhoneNum.cs" />
+    <Compile Include="Data\AgencyFaxNum.cs" />
+    <Compile Include="Data\Companies_MobileNum.cs" />
+    <Compile Include="Data\Contractors_FaxNum.cs" />
+    <Compile Include="Data\MainTestStatus.cs" />
+    <Compile Include="Data\EditRecieption.cs" />
+    <Compile Include="Data\MasterTestStatusEditRecieption.cs" />
+    <Compile Include="Data\MasterTestStatus.cs" />
+    <Compile Include="Data\MasterTarrif.cs" />
+    <Compile Include="Data\Banks.cs" />
+    <Compile Include="Data\Cash.cs" />
+    <Compile Include="Data\Cashier.cs" />
+    <Compile Include="Data\Companies_Acquaintance.cs" />
+    <Compile Include="Data\Companies_Activity.cs" />
+    <Compile Include="Data\Companies_Base.cs" />
+    <Compile Include="Data\Companies_Cooperation.cs" />
+    <Compile Include="Data\Companies_English.cs" />
+    <Compile Include="Data\Companies_Explanation.cs" />
+    <Compile Include="Data\Companies_FaxNum.cs" />
+    <Compile Include="Data\Companies_PhoneNum.cs" />
+    <Compile Include="Data\Companies_Security.cs" />
+    <Compile Include="Data\Companies_SendType.cs" />
+    <Compile Include="Data\Companies_SpaceSendSMS.cs" />
+    <Compile Include="Data\Companies_Agency.cs" />
+    <Compile Include="Data\Companies_Email.cs" />
+    <Compile Include="Data\Company_Province.cs" />
+    <Compile Include="Data\ContractExecuters_Unusual.cs" />
+    <Compile Include="Data\Contractors.cs" />
+    <Compile Include="Data\Contractors_PhoneNum.cs" />
+    <Compile Include="Data\Contracts_Base.cs" />
+    <Compile Include="Data\Contracts_Edit.cs" />
+    <Compile Include="Data\Contracts_Executers.cs" />
+    <Compile Include="Data\Contracts_Finacial.cs" />
+    <Compile Include="Data\Contracts_Report.cs" />
+    <Compile Include="Data\Contracts_Void.cs" />
+    <Compile Include="Data\DetailTest.cs" />
+    <Compile Include="Data\Laboratory.cs" />
+    <Compile Include="Data\Laboratory_Contract_Executer.cs" />
+    <Compile Include="Data\LaboratoryStatus.cs" />
+    <Compile Include="Data\Machins.cs" />
+    <Compile Include="Data\MainTest.cs" />
+    <Compile Include="Data\MasterTest.cs" />
+    <Compile Include="Data\Office_FaxNum.cs" />
+    <Compile Include="Data\Office_PhoneNum.cs" />
+    <Compile Include="Data\Offices.cs" />
+    <Compile Include="Data\Parts_EnglishName.cs" />
+    <Compile Include="Data\Parts_Master.cs" />
+    <Compile Include="Data\Parts_Report.cs" />
+    <Compile Include="Data\Parts_Tests_Detail.cs" />
+    <Compile Include="Data\Parts_Tests_Master.cs" />
+    <Compile Include="Data\Parts_Tests_Void.cs" />
+    <Compile Include="Data\ReceptionMainTest.cs" />
+    <Compile Include="Data\ReportParameter.cs" />
+    <Compile Include="Data\ReportSendingType.cs" />
+    <Compile Include="Data\SampleSendingType.cs" />
+    <Compile Include="Data\SendType.cs" />
+    <Compile Include="Data\Tarrif.cs" />
+    <Compile Include="Data\Tax.cs" />
+    <Compile Include="Data\TestExecuters.cs" />
+    <Compile Include="Data\USERSGroup.cs" />
+    <Compile Include="Data\USER.cs" />
+    <Compile Include="Data\Yes_No.cs" />
+    <Compile Include="Dictionary\GageDictionary.cs" />
+    <Compile Include="Enums\BookMark.cs" />
+    <Compile Include="Enums\RowState.cs" />
+    <Compile Include="Events\ReternListOfPacket.cs" />
+    <Compile Include="Events\ReturnRowOfTemplates.cs" />
+    <Compile Include="Events\ReturnSelectedDates.cs" />
+    <Compile Include="Events\returnContractsCode.cs" />
+    <Compile Include="Events\ReturnTest.cs" />
+    <Compile Include="Forms\Base\DockContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\DockContentForm.Designer.cs">
+      <DependentUpon>DockContentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\GeneralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\GeneralForm.Designer.cs">
+      <DependentUpon>GeneralForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterFaces\IPayment.cs" />
+    <Compile Include="InterFaces\IRecieption.cs" />
+    <Compile Include="InterFaces\IRow.cs" />
+    <Compile Include="Lists\NumberOfExecutersAmadesaziShabList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NumberOfExecutersAmadesaziRuzList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DeleteAttachmentOfReportsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LightDescList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CooperationGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DarsadGreenRedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Avg99List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HoldedBeforeFinancialList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MotaleatList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Cancel_Contracts_IsHoldedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ActivePartForEnterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DeliveryOfReportsToTheCustomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LicensingdeliveryreportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OutPutExecutersDetailFormanagerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendReportForCustomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ChengeForAmountOfBillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Csv_ContractList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AcceptedMarketingActivityList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Darsad98List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ManagerOfDiscountList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Avg98List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Avg97List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportMarketingOperationList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\WorkFlowDescriptionReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\UncertainvariationsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CancelExitScienceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CancelEnterScienceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CancelExitLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CancelEnterLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HasCDForLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DeleteParts_Picture2List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReturnForScienceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HasCdDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HasCdMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NewMasterTestPrintReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestPrintReportRecieptPicList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PageOfLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterPrintRecieptPicList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NewPartsMasterPrintReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendLettersReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartGroupingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ActingGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendLettersList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialLaboratoryNumberOfTestsBillTypeCustomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PrePaidAmountForContractList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\WastePartsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CooperationGroup_TafahomNameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TafahomNameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfPaperDiscountList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PaperOfDiscountList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfRemindHaghighiList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RegisterNotInPersonPartList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceiptStudentList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NotDeliveryReportToCustomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Companies_EmailForInvoiceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NotSendedCostPaperList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RemindSeparatedbycustomerMarketingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendedCostPaperList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendingReportEmailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\InitialComplaintReviewList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReferralComplaintToUserList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CheckContractList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TypesOfCostStatementsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EditComplaintList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MarketingReportFollowUpList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfVoidBillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ComplaintTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SabtComplaintList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportSalesYearlyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfSemList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BedBesCompaniesBaseFinancialYear_1394List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BedBesCompaniesBaseFinancialYear_1395List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BedBesCompaniesBaseFinancialYear_1396List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BedBesCompaniesBaseFinancialYear_1397List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BedBesCompaniesBaseFinancialYear_1393List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TimingSEMNoCustomerPresenceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TimingSEMCanceledList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowCompaniesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Connector_PeapleRelatedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SEMContractList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportDetailFollowupFinancialContractsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ResourcesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AppointmentsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TimeOfSemList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FollowupFinancialContractsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\WriteOffMarketingCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReferralCompanyReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TransferCompaniesToMarketingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\statusOfMarketingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowMessagingMarketingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ResponceToMessagingMarketingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MessagingMarketingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DetailOfProfileContractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ProfileOfContractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportTotalMarketingActivityList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfMarketingActivityTrackingDateList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReferralsCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfMarketingActivityKolList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowMarketingActivityList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Companies_PeopleRelatedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NonAcceptedMarketingActivityList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TrackingStatusMarketingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsBaseDeclareCostList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsBaseEditDeclareCostList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestStatusDeclareCostList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Parts_Master_DeclareCostList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfMarketingActivityList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MarketingActivityList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MarketingCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ClearReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Companies_BaseMarketingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReturnVoidPartList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Standard_DataList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Standard_NamesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Standard_BaseList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterBillVoidList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ChequeNoPassedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RemindDebtorYearToYearAlphaList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RemindSeparatedbycustomerCashList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RemindSeparatedbycustomerCreditorList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DetaiolOfRecieptList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MonthlyReport2014To2015List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MonthlyReport2015To2016List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OrderStatusCreditCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OrderStatusCashCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NanoReportsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CashOrderStatusList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NotDestructList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ApprovePrintList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CopyPrintList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotExitedFromLaboratoryLargeSampleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotExitedFromLaboratoryWestSideList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterSendEmailOutoList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RepeatePrintList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RecDuplicatePrintList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReciepOfCustomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HasSaveEditedReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HasSaveCostPaperList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HasContracsLetterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NotRecieveFromContractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DetailOfNotRecieveFromContractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportMounthlyLaboratory2014To2015List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportMounthlyLaboratory2015To2016List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesForLaboratoryWestSideList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesForStoreWestSideList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowWorkFlowDescriptionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AssignExecutersList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceiveBankTransferList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowSaveChequeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\WorkFlowDescriptionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Parts_Tests_MasterForWorkFlowList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CalcLaboratoryCost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CancelExitForEditReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ActiveNonActiveList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CurrentWorkOfCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EmptyBasketNotApprovedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotExitedFromStoredNotAapprovedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotStoredNotApprovedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RecieptionLongIsHoldTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportSendingEmailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportSendingInPersonList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ArlList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CultchStoreList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsEmptyPrintReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Part_Pic2List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Print_TestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportPart_Pic2List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowEditedReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowSaveCostPaperList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RemindDebtorYearToYearList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DarsadAndRemindList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MechanicalLabDeliveryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SabtCompanyUserList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ViewSabtSamaneList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ViewGrantList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CountTestOfLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ExecutersLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MainTestPriorityRecList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestPriorityRecList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesWestSideList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfStoreWestSideList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowTakhiriMonthlyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ProcessOfCustomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowTahviliAmadesaziList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TahviliAmadesaziList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AcceptGrantList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesConectorList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CloseOpenReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ObservationReportWordList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OpenReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestExecutersAmadesaziList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\StandardsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsNotEnteredAmadesaziList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsNotEnteredAzmoonAmadesaziList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EmptyBasketForWestSideList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotExitedFromStoredForWestSideList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotStoredForWestSideList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterNotEnteredAzmoonAmadesaziList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMaster_NotEnteredAmadeSaziList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowOpenInvoiceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OpenCloseInvoiceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OutPutExecutersManagerKolList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OutPutExecutersManagerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CloseBillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DaneshBonyanForLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfDaneshBonyanList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\InspectorCompanyForContractList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterForWorkFlowList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsForWorkFlowList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RegisterNopaymentsForViewList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RegisterNopaymentsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\InspectorList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompanyOfInspectList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EmailBillMonthlyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EmailMonthlyBillShowList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendEmailCostomerCostPDFForOfficesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestNameNotEnteredAzmoonAmadesaziList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ThefunctionoftheentirecompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractWith2CompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfCorrosionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\WageofagencyPayList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AssignGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DiscountOfCompaniesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CheckDestructList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LaboratoryForWorkFlowList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ValidatorOfFinancialList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RepotOfGrantList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsInPendingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialSupprtDailyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesOfDontGoBonyad2MonthList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\listOfConnectorNameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OmitReportPersianList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SampleOfFinancialSanadsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FollowUpIsHoldContractForViewList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FollowUpIsHoldContractList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EditMessageList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ConnectorOfCompaniesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\KarkardCooperationWithAgencyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\KarkardCooperationList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DontHaveDeliveryDateList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ViewReceiptDemandList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceiptDemandForCompaniesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MonthlyReport2017To2018List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RedactList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RegisterMarkingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MonthlyReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReasonOfDntExportInvoiceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CancelFinacialSupportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportMounthlyLaboratory2017To2018List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ResonOfRecieptionLongList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RecieptionLongList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DilatoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowDeliveryDateChangeForManagerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ViewSentPartToContractorsForLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesReferntList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RegisterInsuranceForViewList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RegisterGrantForViewList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DetailOfReceptionForCashCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestForThePresenceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DetailOfReceptionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\IscompletedForCancelToExitList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DifferenceInvoiceContractList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DeliveryDayForMagementList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportMounthlyLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowSendMessageList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindContractNoForOfficesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OutPutExecutersDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OutPutExecutersList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestForThePresenceDateChangeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfInvoiceOfContractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SentPartToContractorsForBillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SentPartToContractorsForPreBillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SentPartToContractorsForVoidList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ViewTarrifList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\New_ReceiptList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfCreditCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EarnDeliveryDayList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SentPartToContractorsDetailReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SentPartToContractorsReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EditContractorsForLabList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DescriptionForSendTestContractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EnterMobileNoForCustomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EarninigOfAgencyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OfficesFinancialAgencyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ViewIndicatorList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\IndicatorList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ExitFromEditInScienceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CancelExitForEditInScienceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Contracts_NotExitedForScientificExpertForHarmonyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Contracts_NotEnteredForScientificexpertsForHarmonyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DeliveryDayForHarmonyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HoldContractNotCompletedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractIsVoidSegregateList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestDoneForCompanyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RecieveExperimentFromContractorList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ScientificExpertsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ChartLaboratoryofFinancialConditionReportMasterTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\contactsiscompletednothasinvoiceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsNotExitedForScientificExpertList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Contracts_NotEnteredForScientificexpertsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindMasterNameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterNotEnteredForScientificexpertsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterNotExitedForScientificExpertList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PrintOfRequestContractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SentPartToContractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\finanicalConfirmedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Contractors_MobilNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DailyProcessReportForLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DetailOfSanadList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\emailTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EmptyBasketForLargeSampleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportPart_PicList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotExitedFromStoredForLargeSampleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotStoredForLargeSampleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Reception_PicList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceiveChequeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DailyProcessReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PaymentAmount_DetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Payment_AssignmentList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PaymentAmount_MasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CopmanyPayment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NumberOfExecutersOutputDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\NumberOfExecutersOutputList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\GenerateLabelList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialLaboratoryNumberOfTestsDeliveryDayList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PaymentTypesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesForLaboratoryForLargeSampleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesForLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesForStoreForLargeSampleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesForStoreList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesForLargeSampleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportsOfEnterExitPiecesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotExitedFromLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Part_PicList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CancelReportWriteList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReasonOfCancelToExitDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReasonOfCancelToExitList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ChartLaboratoryofFinancialConditionReportDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesCostPaperForOfficesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CostomersCostGridForOfficesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialLaboratoryNumberOfTestsBillDetaileList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialLaboratoryNumberOfTestsDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ChartLaboratoryofFinancialConditionReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialLaboratoryNumberOfTestsBillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialLaboratoryNumberOfTestsExitedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestListCostPaperForOfficesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestExecutersLaboratorysList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfPOGCList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportOfPOGCDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestNameNotEnteredForScientificexpertsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestNameNotExitedForScientificExpertList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ThreemonthssalesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractBaseWithDiscountList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowDeliveryDateChangeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DeliveryDateChangeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsBaseEditForOfficesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendEmailOfBillsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendEmailOfCostOfCustomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\companyWorkFlowBaseOfPeymentCostomerList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindCompanyNameBaseOfReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OnceMeetOfBonyadList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterEmptyPrintReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RequestOfContractorDoesnotSendList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RequestOfContractorList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Contractors_FaxNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Cancel_Contracts_IsHoldDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Cancel_Contracts_IsHoldList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Contracts_IsHoldList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CurrentYearList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ChangeYearList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReadOfUnreadMessageList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Laboratory_UserList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendMessageList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ShowVoidContractsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\contractinfoForEmailOfBillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ChangePriceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\StandardDataList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\InsertStandardList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterSendEmailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendEmailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Metal_PicList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\GetDocumentForPrintList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestPrintReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterPrintReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ObservationReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BookMarksList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AddReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialLaboratoryNumberOfTestsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LaboratoryReportsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CreditCompanyWorkFlowList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsWasCompletedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsWithoutBillsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindBillNumberList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DefinitionPersianTemplateList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Insert_RecieptAmountSanadList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportingDelayList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CreditreportingcompaniesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\HaghighiHoghughiList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Insert_SandList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsNotenteredintotheLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RecieptionDayList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ExecutersList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\VoidedContractsDescriptionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\VoidedContractsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsenteredintotheLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DeliveryDayList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SettledcontractsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BillsissuedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterNotEnteredList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestNameNotEnteredList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TurnoverreachedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TheamountofdailyintakeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LaboratoryofFinancialConditionReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OfficeofFinancialConditionReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MenuForUserList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\UserAccesMenuList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\UsersMenuList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceiptAssignmentList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotExitedFromStoredList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EmptyBasketList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsAreNotStoredList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EnterExitPiecesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BasketList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DebtorInvoiceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AmountChartMainTestDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AmountChartLaboratoryDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialMainTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinancialLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AmountChartDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OfficesFinancialDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AmountChartList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OfficesFinancialList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TheseparationofofficesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestListCostPaperList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindContractsCodeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\RecieptHistoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesCostPaperList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DebtorCreditorCompaniesWorkFlowList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompanyWorkFlowList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\voidContractList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindContractNoList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindCompanyNameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindLetterNoList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindPartsNameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterNotExitedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestNameNotExitedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsNotExitedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsNotEnteredList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FindUsersLaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ValidateCredentialsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinanciacceptList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CostomerCostList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CostomersCostGridList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CreditorRemindList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\FinanicalAcceptTets.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceiptAmountDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceiptTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DebtorCreditorContractBaseList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DebtorCreditorCompaniesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceiptAmountMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsCancelToExitList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BillReissuesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsReissuesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\IsCompletedList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsBillingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsBaseEditReissuesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterBillDetailBillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsBaseEditDisCountList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\EditRecieptionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsBaseEditList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CreateContractNumberList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LaboratoryMachinList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportSendingFaxList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AgencyMobileNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AgencyPhoneNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\AgencyFaxNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Companies_MobileNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestStatusList_Main.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReceptionMainTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MainTestStatusList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestStatusList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTarrifList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\BanksList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Base\BaseList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\companiesEmailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesFaxNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CashList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ChasierList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesAcqaintanceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesActivityTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesAgencyListList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesBaseList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesCooperationTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesEnglishList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesExplanationList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesPhoneNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesProvincisList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesSecurityTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesSendTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\CompaniesSpaceSendSMSList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ConstractorsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ConstractsExecutersList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractExecutersUnusualList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractorsPhoneNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsBaseList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsEditList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsFinancialList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ContractsVoidList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\DetailTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LaboratoryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LaboratoryCotracetExecutersList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\LaboratoryStatusList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Machinslist.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MainTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\MasterTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OfficeFaxNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OfficePhoneNumList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\OfficesList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsEnglishNameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsReportList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsTestDetailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsTestMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\PartsTestsVoidList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\ReportParameters.cs" />
+    <Compile Include="Lists\ReportSendingTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SampleSendingTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\SendTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TarrifList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TaxList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\TestExeecutersList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\UsersGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\UserList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Yes_NoForDestructList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lists\Yes_NoList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource\Documents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Documents.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dashboard\" />
+    <Folder Include="DataLists\" />
+    <Folder Include="DataTypes\" />
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Base\DockContentForm.resx">
+      <DependentUpon>DockContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\GeneralForm.resx">
+      <DependentUpon>GeneralForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Resource\Documents.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Documents.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\Cost_Letter.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Cost_LetterPartsMaster.docx" />
+    <None Include="Resources\Cost_LetterPartsMasterForInformalFactor.docx" />
+    <None Include="Resources\Cost_LetterPartsMasterInformal.docx" />
+    <None Include="Resources\Cost_LetterPartsMasterWithHeader.docx" />
+    <None Include="Resources\EmailMonthlyBill.docx" />
+    <None Include="Resources\FinancialSupportEmail.docx" />
+    <None Include="Resources\Template.pdf" />
+    <None Include="Resources\نمایشگاه 4.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Message\Message.csproj">
+      <Project>{5ec3bdba-9634-44b2-8b15-b043c499b26b}</Project>
+      <Name>Message</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyEnglishTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyEnglishTemplateTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnglishTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnglishTemplateDuplicate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnglishTemplateDuplicateTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnglishTemplateTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_EnglishTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_EnglishTemplateTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TemplateDuplicate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almossanna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duplicate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyAslPersian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyAslEnglish.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Aspose.PDF</id>
+    <version>19.1.0</version>
+    <title>Aspose.PDF for .NET</title>
+    <authors>Aspose</authors>
+    <owners>Aspose</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://company.aspose.com/legal/eula</licenseUrl>
+    <projectUrl>https://products.aspose.com/pdf/net</projectUrl>
+    <iconUrl>https://blog.aspose.com/wp-content/uploads/sites/2/2016/06/aspose-Pdf-for-net.png</iconUrl>
+    <description>Aspose.PDF for .NET is a PDF document creation and manipulation component that enables your .NET applications to read, write and manipulate existing PDF documents without using Adobe Acrobat. It also allows you to create forms and manage form fields embedded in a PDF document. This component is written in managed C# and it allows developers to add PDF creation and manipulation functionality to their Microsoft .NET applications (WinForms, ASP.NET and .NET Compact Framework).
+        Aspose.PDF for .NET is affordable and offers an incredible wealth of features including PDF compression options; table creation and manipulation; support for graph objects; extensive hyperlink functionality; extended security controls; custom font handling; integration with data sources; add or remove bookmarks; create table of contents; add, update, delete attachments and annotations; import or export PDF form data; add, replace or remove text and images; split, concatenate, extract or inset pages; transform pages to image; print PDF documents and much more.</description>
+    <summary>Aspose.PDF for .NET is an amazing component which provides the feature to create and manipulate PDF documents.</summary>
+    <releaseNotes>https://docs.aspose.com/display/pdfnet/Aspose.PDF+for+.NET+19.1+Release+Notes</releaseNotes>
+    <copyright>©Aspose 2002-2019. All Rights Reserved.</copyright>
+    <tags>Aspose.Pdf PDF XFA XPS TIFF PCL SVG HTML XML XSL-FO FDF XFDF PDF/A form Portfolio EPUB PSD to XLS PDF-to-DOC</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Security.Permissions" version="4.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encoding.CodePages" version="4.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.Drawing.Common" version="4.5.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyModel" version="2.0.4" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.PerformanceCounter" version="4.5.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

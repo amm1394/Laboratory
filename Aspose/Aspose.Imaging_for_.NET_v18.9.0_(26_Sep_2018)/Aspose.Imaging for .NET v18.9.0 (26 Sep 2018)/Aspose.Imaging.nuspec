@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aspose.Imaging</id>
+    <version>18.9.0</version>
+    <title>Aspose.Imaging for .NET</title>
+    <authors>Aspose</authors>
+    <owners>Aspose</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://company.aspose.com/legal/eula</licenseUrl>
+    <projectUrl>https://products.aspose.com/imaging/net</projectUrl>
+    <iconUrl>https://joomla-aspose.dynabic.com/templates/aspose/App_Themes/V3/images/imaging/272x272/aspose_imaging-for-net-min.png</iconUrl>
+    <description>Aspose.Imaging for .NET is an imaging library that lets developers create, edit, draw or convert images in their .NET applications. Aspose.Imaging provides features that go beyond the native capabilities of the development platform. It works independent of other applications and although Aspose.Imaging allows you to save to Adobe PhotoShop® format (PSD), you do not need PhotoShop on the machine.</description>
+    <summary>Aspose.Imaging for .NET is an imaging library that lets developers create, edit, draw or convert images in their .NET applications. Aspose.Imaging provides features that go beyond the native capabilities of the development platform. It works independent of other applications and although Aspose.Imaging allows you to save to Adobe PhotoShop® format (PSD), you do not need PhotoShop on the machine.</summary>
+    <releaseNotes>https://docs.aspose.com/display/imagingnet/Aspose.Imaging+for+.NET+18.9+-+Release+Notes</releaseNotes>
+    <copyright>© Aspose 2002-2018. All Rights Reserved.</copyright>
+    <tags>Aspose.Imaging GIF JPEG JPG JPEG2000 LosslessJPEG JPEG-LS PNG BMP TIF PSD Layers Images Drawing Graphics Interlaced LZW CCITT3 CCITT4 RLE compression Lossless TiffFrame Djvu WebP DICOM Emf Wmf DNG SVG ODG EPS</tags>
+  </metadata>
+</package>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="fa-IR">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="sql-1_LaboratoryRASF_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="sql-1" />
+          <Parameter Name="database" Value="LaboratoryRASF" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="AliReza23280" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="ReportMounthlyLaboratory_Select">
+        <ProcName>ReportMounthlyLaboratory_Select</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="ReportMounthlyLaboratory_Select">
+            <Field Name="LaboratoryName" Type="String" />
+            <Field Name="Farvardin" Type="Int64" />
+            <Field Name="Ordibehesht" Type="Int64" />
+            <Field Name="Khordad" Type="Int64" />
+            <Field Name="Tir" Type="Int64" />
+            <Field Name="Mordad" Type="Int64" />
+            <Field Name="Shahriver" Type="Int64" />
+            <Field Name="Mehr" Type="Int64" />
+            <Field Name="Aban" Type="Int64" />
+            <Field Name="Azar" Type="Int64" />
+            <Field Name="Dey" Type="Int64" />
+            <Field Name="Bahman" Type="Int64" />
+            <Field Name="Esfand" Type="Int64" />
+            <Field Name="Kol" Type="Int64" />
+            <Field Name="Darsad" Type="Decimal" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="dashboardSqlDataSource1" DataMember="ReportMounthlyLaboratory_Select">
+      <DataItems>
+        <Dimension DataMember="LaboratoryName" DefaultId="DataItem0" />
+        <Measure DataMember="Farvardin" DefaultId="DataItem1" />
+        <Measure DataMember="Ordibehesht" DefaultId="DataItem2" />
+        <Measure DataMember="Khordad" DefaultId="DataItem3" />
+        <Measure DataMember="Tir" DefaultId="DataItem4" />
+        <Measure DataMember="Mordad" DefaultId="DataItem5" />
+        <Measure DataMember="Shahriver" DefaultId="DataItem6" />
+        <Measure DataMember="Mehr" DefaultId="DataItem7" />
+        <Measure DataMember="Aban" DefaultId="DataItem8" />
+        <Measure DataMember="Azar" DefaultId="DataItem9" />
+        <Measure DataMember="Dey" DefaultId="DataItem10" />
+        <Measure DataMember="Bahman" DefaultId="DataItem11" />
+        <Measure DataMember="Esfand" DefaultId="DataItem12" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem2" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem3" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem4" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem5" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem6" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem7" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem8" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem9" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem10" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem11" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem12" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX EnableZooming="true" LimitVisiblePoints="true" />
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="0.5" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

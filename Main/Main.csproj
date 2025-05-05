@@ -279,9 +279,8 @@
     <Reference Include="Microsoft.Toolkit.Uwp.Notifications, Version=7.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
       <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\Microsoft.Toolkit.Uwp.Notifications.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RadControlSpy, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\RadControlSpy.dll</HintPath>
@@ -306,6 +305,7 @@
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <Private>True</Private>
     </Reference>
@@ -554,7 +554,7 @@
       <HintPath>..\packages\UI.for.WinForms.AllControls.Net40.2024.1.312\lib\net40\TelerikExport.dll</HintPath>
     </Reference>
     <Reference Include="WeifenLuo.WinFormsUI.Docking">
-      <HintPath>..\packages\DockPanelSuite.2.9.0.0\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+      <HintPath>..\Dll\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase">
       <Private>True</Private>
@@ -4425,6 +4425,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Financial\ReportMounthlyLaboratory.resx">
       <DependentUpon>ReportMounthlyLaboratory.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Financial\ReportMounthlyLaboratory2024To2026Form.resx">
       <DependentUpon>ReportMounthlyLaboratory2024To2026Form.cs</DependentUpon>
@@ -6438,7 +6439,6 @@
     <Content Include="Dashboard\ReportMounthlyLaboratory2017To2018.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="license.txt" />
     <Content Include="Logo-64.ico" />
     <None Include="Resources\user.png" />
     <None Include="Resources\Marking.png" />

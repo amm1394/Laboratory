@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportMounthlyLaboratory));
             Janus.Windows.GridEX.GridEXLayout grdReport_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportMounthlyLaboratory));
             Janus.Windows.GridEX.GridEXLayout grdDarsad98_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
             Janus.Windows.GridEX.GridEXLayout grdkol_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
             Janus.Windows.GridEX.GridEXLayout grdDarsad_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
@@ -210,9 +210,9 @@
             // 
             // 
             this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel1.Size = new System.Drawing.Size(1284, 257);
-            this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.08753709F);
-            this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 89);
+            this.splitPanel1.Size = new System.Drawing.Size(1284, 238);
+            this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.06874381F);
+            this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 70);
             this.splitPanel1.TabIndex = 0;
             this.splitPanel1.TabStop = false;
             this.splitPanel1.Text = "splitPanel1";
@@ -221,10 +221,10 @@
             // 
             this.groupBox1.AutoScroll = true;
             this.groupBox1.Controls.Add(this.grdReport);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1267, 424);
+            this.groupBox1.Size = new System.Drawing.Size(1284, 238);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.Text = "گزارش ماهانه آزمایشگاه ها";
             this.groupBox1.VisualStyle = Janus.Windows.UI.Dock.PanelVisualStyle.Office2007;
@@ -244,7 +244,7 @@
             this.grdReport.GroupByBoxVisible = false;
             this.grdReport.Location = new System.Drawing.Point(3, 18);
             this.grdReport.Name = "grdReport";
-            this.grdReport.Size = new System.Drawing.Size(1261, 403);
+            this.grdReport.Size = new System.Drawing.Size(1278, 217);
             this.grdReport.TabIndex = 1;
             this.grdReport.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center;
             this.grdReport.TotalRow = Janus.Windows.GridEX.InheritableBoolean.True;
@@ -254,15 +254,15 @@
             // 
             this.splitPanel2.AutoScroll = true;
             this.splitPanel2.Controls.Add(this.grdDarsad98);
-            this.splitPanel2.Location = new System.Drawing.Point(0, 261);
+            this.splitPanel2.Location = new System.Drawing.Point(0, 242);
             this.splitPanel2.Name = "splitPanel2";
             // 
             // 
             // 
             this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel2.Size = new System.Drawing.Size(1284, 74);
-            this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.09347182F);
-            this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -94);
+            this.splitPanel2.Size = new System.Drawing.Size(1284, 38);
+            this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.1290801F);
+            this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -130);
             this.splitPanel2.TabIndex = 1;
             this.splitPanel2.TabStop = false;
             this.splitPanel2.Text = "splitPanel2";
@@ -281,7 +281,7 @@
             this.grdDarsad98.GroupByBoxVisible = false;
             this.grdDarsad98.Location = new System.Drawing.Point(0, 0);
             this.grdDarsad98.Name = "grdDarsad98";
-            this.grdDarsad98.Size = new System.Drawing.Size(1284, 74);
+            this.grdDarsad98.Size = new System.Drawing.Size(1284, 38);
             this.grdDarsad98.TabIndex = 0;
             this.grdDarsad98.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center;
             this.grdDarsad98.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003;
@@ -290,15 +290,15 @@
             // 
             this.splitPanel3.AutoScroll = true;
             this.splitPanel3.Controls.Add(this.groupBox2);
-            this.splitPanel3.Location = new System.Drawing.Point(0, 339);
+            this.splitPanel3.Location = new System.Drawing.Point(0, 284);
             this.splitPanel3.Name = "splitPanel3";
             // 
             // 
             // 
             this.splitPanel3.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel3.Size = new System.Drawing.Size(1284, 216);
-            this.splitPanel3.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.04698318F);
-            this.splitPanel3.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 47);
+            this.splitPanel3.Size = new System.Drawing.Size(1284, 257);
+            this.splitPanel3.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.08753709F);
+            this.splitPanel3.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 88);
             this.splitPanel3.TabIndex = 2;
             this.splitPanel3.TabStop = false;
             this.splitPanel3.Text = "splitPanel3";
@@ -307,10 +307,10 @@
             // 
             this.groupBox2.AutoScroll = true;
             this.groupBox2.Controls.Add(this.grdkol);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1267, 291);
+            this.groupBox2.Size = new System.Drawing.Size(1284, 257);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.Text = "گزارش ماهانه کل";
             this.groupBox2.VisualStyle = Janus.Windows.UI.Dock.PanelVisualStyle.Office2007;
@@ -328,8 +328,8 @@
             this.grdkol.GroupByBoxVisible = false;
             this.grdkol.Location = new System.Drawing.Point(3, 18);
             this.grdkol.Name = "grdkol";
-            this.grdkol.Size = new System.Drawing.Size(1261, 270);
-            this.grdkol.TabIndex = 1;
+            this.grdkol.Size = new System.Drawing.Size(1278, 236);
+            this.grdkol.TabIndex = 2;
             this.grdkol.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center;
             this.grdkol.TotalRow = Janus.Windows.GridEX.InheritableBoolean.True;
             this.grdkol.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003;
@@ -338,15 +338,15 @@
             // 
             this.splitPanel4.AutoScroll = true;
             this.splitPanel4.Controls.Add(this.groupBox3);
-            this.splitPanel4.Location = new System.Drawing.Point(0, 559);
+            this.splitPanel4.Location = new System.Drawing.Point(0, 545);
             this.splitPanel4.Name = "splitPanel4";
             // 
             // 
             // 
             this.splitPanel4.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel4.Size = new System.Drawing.Size(1284, 78);
-            this.splitPanel4.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.08951534F);
-            this.splitPanel4.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -91);
+            this.splitPanel4.Size = new System.Drawing.Size(1284, 75);
+            this.splitPanel4.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.09248269F);
+            this.splitPanel4.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -94);
             this.splitPanel4.TabIndex = 3;
             this.splitPanel4.TabStop = false;
             this.splitPanel4.Text = "splitPanel4";
@@ -355,10 +355,10 @@
             // 
             this.groupBox3.AutoScroll = true;
             this.groupBox3.Controls.Add(this.grdDarsad);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1284, 77);
+            this.groupBox3.Size = new System.Drawing.Size(1284, 75);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.Text = "گزارش درصد مانده ها";
             this.groupBox3.VisualStyle = Janus.Windows.UI.Dock.PanelVisualStyle.Office2007;
@@ -377,7 +377,7 @@
             this.grdDarsad.GroupByBoxVisible = false;
             this.grdDarsad.Location = new System.Drawing.Point(3, 18);
             this.grdDarsad.Name = "grdDarsad";
-            this.grdDarsad.Size = new System.Drawing.Size(1278, 56);
+            this.grdDarsad.Size = new System.Drawing.Size(1278, 54);
             this.grdDarsad.TabIndex = 0;
             this.grdDarsad.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center;
             this.grdDarsad.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003;
@@ -386,15 +386,15 @@
             // 
             this.splitPanel5.AutoScroll = true;
             this.splitPanel5.Controls.Add(this.groupBox6);
-            this.splitPanel5.Location = new System.Drawing.Point(0, 641);
+            this.splitPanel5.Location = new System.Drawing.Point(0, 624);
             this.splitPanel5.Name = "splitPanel5";
             // 
             // 
             // 
             this.splitPanel5.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel5.Size = new System.Drawing.Size(1284, 182);
-            this.splitPanel5.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.01335311F);
-            this.splitPanel5.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 14);
+            this.splitPanel5.Size = new System.Drawing.Size(1284, 225);
+            this.splitPanel5.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.05588526F);
+            this.splitPanel5.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 57);
             this.splitPanel5.TabIndex = 4;
             this.splitPanel5.TabStop = false;
             this.splitPanel5.Text = "splitPanel5";
@@ -405,7 +405,7 @@
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1284, 182);
+            this.groupBox6.Size = new System.Drawing.Size(1284, 225);
             this.groupBox6.TabIndex = 11;
             this.groupBox6.Text = "گزارش فروش و مانده ها به تفکیک سال";
             this.groupBox6.VisualStyle = Janus.Windows.UI.Dock.PanelVisualStyle.Office2007;
@@ -425,7 +425,7 @@
             this.grid2.GroupByBoxVisible = false;
             this.grid2.Location = new System.Drawing.Point(3, 18);
             this.grid2.Name = "grid2";
-            this.grid2.Size = new System.Drawing.Size(1278, 161);
+            this.grid2.Size = new System.Drawing.Size(1278, 204);
             this.grid2.TabIndex = 2;
             this.grid2.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center;
             this.grid2.TotalRow = Janus.Windows.GridEX.InheritableBoolean.True;
@@ -435,15 +435,15 @@
             // splitPanel6
             // 
             this.splitPanel6.Controls.Add(this.tableLayoutPanel2);
-            this.splitPanel6.Location = new System.Drawing.Point(0, 827);
+            this.splitPanel6.Location = new System.Drawing.Point(0, 853);
             this.splitPanel6.Name = "splitPanel6";
             // 
             // 
             // 
             this.splitPanel6.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel6.Size = new System.Drawing.Size(1284, 204);
-            this.splitPanel6.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.03511374F);
-            this.splitPanel6.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 35);
+            this.splitPanel6.Size = new System.Drawing.Size(1284, 178);
+            this.splitPanel6.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.009396632F);
+            this.splitPanel6.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 9);
             this.splitPanel6.TabIndex = 5;
             this.splitPanel6.TabStop = false;
             this.splitPanel6.Text = "splitPanel6";
@@ -548,7 +548,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1284, 204);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1284, 178);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label1
@@ -556,7 +556,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(1104, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 20);
+            this.label1.Size = new System.Drawing.Size(177, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "کل فروش";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -566,7 +566,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(921, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 20);
+            this.label2.Size = new System.Drawing.Size(177, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "کل فروش + ارزش افزوده";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -576,7 +576,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(738, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 20);
+            this.label3.Size = new System.Drawing.Size(177, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "فروش اعتباری";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -586,7 +586,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(555, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 20);
+            this.label4.Size = new System.Drawing.Size(177, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "فروش نقدی";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -596,7 +596,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(372, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 20);
+            this.label5.Size = new System.Drawing.Size(177, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "فروش مناقصه ای";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -606,7 +606,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Location = new System.Drawing.Point(189, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 20);
+            this.label6.Size = new System.Drawing.Size(177, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "فروش حقیقی";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -616,7 +616,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 20);
+            this.label7.Size = new System.Drawing.Size(180, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "فروش حقوقی";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -624,9 +624,9 @@
             // label8
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(1104, 50);
+            this.label8.Location = new System.Drawing.Point(1104, 43);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(177, 20);
+            this.label8.Size = new System.Drawing.Size(177, 17);
             this.label8.TabIndex = 7;
             this.label8.Text = "فروش مشمول بیمه";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -634,9 +634,9 @@
             // label9
             // 
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(921, 50);
+            this.label9.Location = new System.Drawing.Point(921, 43);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(177, 20);
+            this.label9.Size = new System.Drawing.Size(177, 17);
             this.label9.TabIndex = 8;
             this.label9.Text = "فروش مشمول بیمه مناقصه";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -644,9 +644,9 @@
             // label10
             // 
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(738, 50);
+            this.label10.Location = new System.Drawing.Point(738, 43);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(177, 20);
+            this.label10.Size = new System.Drawing.Size(177, 17);
             this.label10.TabIndex = 9;
             this.label10.Text = "فروش مشمول بیمه سایر";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -654,9 +654,9 @@
             // label11
             // 
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(555, 50);
+            this.label11.Location = new System.Drawing.Point(555, 43);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(177, 20);
+            this.label11.Size = new System.Drawing.Size(177, 17);
             this.label11.TabIndex = 10;
             this.label11.Text = "مطالبات کل";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -664,9 +664,9 @@
             // label12
             // 
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(372, 50);
+            this.label12.Location = new System.Drawing.Point(372, 43);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(177, 20);
+            this.label12.Size = new System.Drawing.Size(177, 17);
             this.label12.TabIndex = 11;
             this.label12.Text = "مطالبات اعتباری";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -674,9 +674,9 @@
             // label13
             // 
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(189, 50);
+            this.label13.Location = new System.Drawing.Point(189, 43);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(177, 20);
+            this.label13.Size = new System.Drawing.Size(177, 17);
             this.label13.TabIndex = 12;
             this.label13.Text = "مطالبات نقدی";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -684,9 +684,9 @@
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(3, 50);
+            this.label14.Location = new System.Drawing.Point(3, 43);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(180, 20);
+            this.label14.Size = new System.Drawing.Size(180, 17);
             this.label14.TabIndex = 13;
             this.label14.Text = "مطالبات مناقصه ای";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -694,9 +694,9 @@
             // label15
             // 
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(1104, 100);
+            this.label15.Location = new System.Drawing.Point(1104, 86);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(177, 20);
+            this.label15.Size = new System.Drawing.Size(177, 17);
             this.label15.TabIndex = 14;
             this.label15.Text = "مانده اعتباری دفاتر";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -704,9 +704,9 @@
             // label16
             // 
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(921, 100);
+            this.label16.Location = new System.Drawing.Point(921, 86);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(177, 20);
+            this.label16.Size = new System.Drawing.Size(177, 17);
             this.label16.TabIndex = 15;
             this.label16.Text = "مانده نقد دفاتر";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -714,9 +714,9 @@
             // label17
             // 
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(738, 100);
+            this.label17.Location = new System.Drawing.Point(738, 86);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(177, 20);
+            this.label17.Size = new System.Drawing.Size(177, 17);
             this.label17.TabIndex = 16;
             this.label17.Text = "مانده مناقصه";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -724,9 +724,9 @@
             // label18
             // 
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(555, 100);
+            this.label18.Location = new System.Drawing.Point(555, 86);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(177, 20);
+            this.label18.Size = new System.Drawing.Size(177, 17);
             this.label18.TabIndex = 17;
             this.label18.Text = "مانده گرانت";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -734,9 +734,9 @@
             // label19
             // 
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(372, 100);
+            this.label19.Location = new System.Drawing.Point(372, 86);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(177, 20);
+            this.label19.Size = new System.Drawing.Size(177, 17);
             this.label19.TabIndex = 18;
             this.label19.Text = "مانده بیمه کل";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -744,9 +744,9 @@
             // label20
             // 
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(189, 100);
+            this.label20.Location = new System.Drawing.Point(189, 86);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(177, 20);
+            this.label20.Size = new System.Drawing.Size(177, 17);
             this.label20.TabIndex = 19;
             this.label20.Text = "مانده بیمه مناقصه";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -754,9 +754,9 @@
             // label21
             // 
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(3, 100);
+            this.label21.Location = new System.Drawing.Point(3, 86);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(180, 20);
+            this.label21.Size = new System.Drawing.Size(180, 17);
             this.label21.TabIndex = 20;
             this.label21.Text = "درصد کل مطالبات به کل فروش";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -764,9 +764,9 @@
             // label22
             // 
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(1104, 150);
+            this.label22.Location = new System.Drawing.Point(1104, 129);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(177, 20);
+            this.label22.Size = new System.Drawing.Size(177, 17);
             this.label22.TabIndex = 21;
             this.label22.Text = "درصد مطالبات نقدی به فروش نقدی";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -774,9 +774,9 @@
             // label23
             // 
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(921, 150);
+            this.label23.Location = new System.Drawing.Point(921, 129);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(177, 20);
+            this.label23.Size = new System.Drawing.Size(177, 17);
             this.label23.TabIndex = 22;
             this.label23.Text = "درصد مطالبات اعتباری به فروش اعتباری";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -784,9 +784,9 @@
             // label24
             // 
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(738, 150);
+            this.label24.Location = new System.Drawing.Point(738, 129);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(177, 20);
+            this.label24.Size = new System.Drawing.Size(177, 17);
             this.label24.TabIndex = 23;
             this.label24.Text = "درصد مطالبات مناقصه به فروش مناقصه";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -794,9 +794,9 @@
             // label25
             // 
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(555, 150);
+            this.label25.Location = new System.Drawing.Point(555, 129);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(177, 20);
+            this.label25.Size = new System.Drawing.Size(177, 17);
             this.label25.TabIndex = 24;
             this.label25.Text = "درصد بیمه کل به فروش کل";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -804,9 +804,9 @@
             // label26
             // 
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(372, 150);
+            this.label26.Location = new System.Drawing.Point(372, 129);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(177, 20);
+            this.label26.Size = new System.Drawing.Size(177, 17);
             this.label26.TabIndex = 25;
             this.label26.Text = "درصد بیمه کل به مطالبات کل";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -814,9 +814,9 @@
             // label27
             // 
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(189, 150);
+            this.label27.Location = new System.Drawing.Point(189, 129);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(177, 20);
+            this.label27.Size = new System.Drawing.Size(177, 17);
             this.label27.TabIndex = 26;
             this.label27.Text = "درصد فروش مشمول بیمه به فروش کل";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -824,9 +824,9 @@
             // label28
             // 
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(3, 150);
+            this.label28.Location = new System.Drawing.Point(3, 129);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(180, 20);
+            this.label28.Size = new System.Drawing.Size(180, 17);
             this.label28.TabIndex = 27;
             this.label28.Text = "درصد بیمه مناقصه به فروش ناقصه";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -835,7 +835,7 @@
             // 
             this.TotalSaleNoTax.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalSaleNoTax.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSaleNoTax.Location = new System.Drawing.Point(1104, 23);
+            this.TotalSaleNoTax.Location = new System.Drawing.Point(1104, 20);
             this.TotalSaleNoTax.Name = "TotalSaleNoTax";
             this.TotalSaleNoTax.ReadOnly = true;
             this.TotalSaleNoTax.Size = new System.Drawing.Size(177, 23);
@@ -850,8 +850,7 @@
             // 
             this.TotalSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSale.FormatMask = Janus.Windows.GridEX.NumericEditFormatMask.General;
-            this.TotalSale.Location = new System.Drawing.Point(921, 23);
+            this.TotalSale.Location = new System.Drawing.Point(921, 20);
             this.TotalSale.Name = "TotalSale";
             this.TotalSale.ReadOnly = true;
             this.TotalSale.Size = new System.Drawing.Size(177, 23);
@@ -866,7 +865,7 @@
             // 
             this.TotalCreditSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalCreditSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalCreditSale.Location = new System.Drawing.Point(738, 23);
+            this.TotalCreditSale.Location = new System.Drawing.Point(738, 20);
             this.TotalCreditSale.Name = "TotalCreditSale";
             this.TotalCreditSale.ReadOnly = true;
             this.TotalCreditSale.Size = new System.Drawing.Size(177, 23);
@@ -881,7 +880,7 @@
             // 
             this.TotalCashSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalCashSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalCashSale.Location = new System.Drawing.Point(555, 23);
+            this.TotalCashSale.Location = new System.Drawing.Point(555, 20);
             this.TotalCashSale.Name = "TotalCashSale";
             this.TotalCashSale.ReadOnly = true;
             this.TotalCashSale.Size = new System.Drawing.Size(177, 23);
@@ -896,7 +895,7 @@
             // 
             this.TotalMonagesheSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalMonagesheSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalMonagesheSale.Location = new System.Drawing.Point(372, 23);
+            this.TotalMonagesheSale.Location = new System.Drawing.Point(372, 20);
             this.TotalMonagesheSale.Name = "TotalMonagesheSale";
             this.TotalMonagesheSale.ReadOnly = true;
             this.TotalMonagesheSale.Size = new System.Drawing.Size(177, 23);
@@ -911,7 +910,7 @@
             // 
             this.TotalHaghighihSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalHaghighihSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalHaghighihSale.Location = new System.Drawing.Point(189, 23);
+            this.TotalHaghighihSale.Location = new System.Drawing.Point(189, 20);
             this.TotalHaghighihSale.Name = "TotalHaghighihSale";
             this.TotalHaghighihSale.ReadOnly = true;
             this.TotalHaghighihSale.Size = new System.Drawing.Size(177, 23);
@@ -926,7 +925,7 @@
             // 
             this.TotalHoghughihSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalHoghughihSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalHoghughihSale.Location = new System.Drawing.Point(3, 23);
+            this.TotalHoghughihSale.Location = new System.Drawing.Point(3, 20);
             this.TotalHoghughihSale.Name = "TotalHoghughihSale";
             this.TotalHoghughihSale.ReadOnly = true;
             this.TotalHoghughihSale.Size = new System.Drawing.Size(180, 23);
@@ -941,7 +940,7 @@
             // 
             this.InsuranceSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InsuranceSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsuranceSale.Location = new System.Drawing.Point(1104, 73);
+            this.InsuranceSale.Location = new System.Drawing.Point(1104, 63);
             this.InsuranceSale.Name = "InsuranceSale";
             this.InsuranceSale.ReadOnly = true;
             this.InsuranceSale.Size = new System.Drawing.Size(177, 23);
@@ -956,7 +955,7 @@
             // 
             this.TotalInsuranceMonagesheSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalInsuranceMonagesheSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalInsuranceMonagesheSale.Location = new System.Drawing.Point(921, 73);
+            this.TotalInsuranceMonagesheSale.Location = new System.Drawing.Point(921, 63);
             this.TotalInsuranceMonagesheSale.Name = "TotalInsuranceMonagesheSale";
             this.TotalInsuranceMonagesheSale.ReadOnly = true;
             this.TotalInsuranceMonagesheSale.Size = new System.Drawing.Size(177, 23);
@@ -971,7 +970,7 @@
             // 
             this.TotalInsuranceOthereSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalInsuranceOthereSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalInsuranceOthereSale.Location = new System.Drawing.Point(738, 73);
+            this.TotalInsuranceOthereSale.Location = new System.Drawing.Point(738, 63);
             this.TotalInsuranceOthereSale.Name = "TotalInsuranceOthereSale";
             this.TotalInsuranceOthereSale.ReadOnly = true;
             this.TotalInsuranceOthereSale.Size = new System.Drawing.Size(177, 23);
@@ -986,7 +985,7 @@
             // 
             this.TotalDebtor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalDebtor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalDebtor.Location = new System.Drawing.Point(555, 73);
+            this.TotalDebtor.Location = new System.Drawing.Point(555, 63);
             this.TotalDebtor.Name = "TotalDebtor";
             this.TotalDebtor.ReadOnly = true;
             this.TotalDebtor.Size = new System.Drawing.Size(177, 23);
@@ -1001,7 +1000,7 @@
             // 
             this.TotalCreditDebtor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalCreditDebtor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalCreditDebtor.Location = new System.Drawing.Point(372, 73);
+            this.TotalCreditDebtor.Location = new System.Drawing.Point(372, 63);
             this.TotalCreditDebtor.Name = "TotalCreditDebtor";
             this.TotalCreditDebtor.ReadOnly = true;
             this.TotalCreditDebtor.Size = new System.Drawing.Size(177, 23);
@@ -1016,7 +1015,7 @@
             // 
             this.TotalCashDebtor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalCashDebtor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalCashDebtor.Location = new System.Drawing.Point(189, 73);
+            this.TotalCashDebtor.Location = new System.Drawing.Point(189, 63);
             this.TotalCashDebtor.Name = "TotalCashDebtor";
             this.TotalCashDebtor.ReadOnly = true;
             this.TotalCashDebtor.Size = new System.Drawing.Size(177, 23);
@@ -1031,7 +1030,7 @@
             // 
             this.TotalMonagesheDebtor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalMonagesheDebtor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalMonagesheDebtor.Location = new System.Drawing.Point(3, 73);
+            this.TotalMonagesheDebtor.Location = new System.Drawing.Point(3, 63);
             this.TotalMonagesheDebtor.Name = "TotalMonagesheDebtor";
             this.TotalMonagesheDebtor.ReadOnly = true;
             this.TotalMonagesheDebtor.Size = new System.Drawing.Size(180, 23);
@@ -1046,7 +1045,7 @@
             // 
             this.OfficeEtebari.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OfficeEtebari.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OfficeEtebari.Location = new System.Drawing.Point(1104, 123);
+            this.OfficeEtebari.Location = new System.Drawing.Point(1104, 106);
             this.OfficeEtebari.Name = "OfficeEtebari";
             this.OfficeEtebari.ReadOnly = true;
             this.OfficeEtebari.Size = new System.Drawing.Size(177, 23);
@@ -1061,7 +1060,7 @@
             // 
             this.OfficeNaghd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OfficeNaghd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OfficeNaghd.Location = new System.Drawing.Point(921, 123);
+            this.OfficeNaghd.Location = new System.Drawing.Point(921, 106);
             this.OfficeNaghd.Name = "OfficeNaghd";
             this.OfficeNaghd.ReadOnly = true;
             this.OfficeNaghd.Size = new System.Drawing.Size(177, 23);
@@ -1076,7 +1075,7 @@
             // 
             this.Monageseh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Monageseh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Monageseh.Location = new System.Drawing.Point(738, 123);
+            this.Monageseh.Location = new System.Drawing.Point(738, 106);
             this.Monageseh.Name = "Monageseh";
             this.Monageseh.ReadOnly = true;
             this.Monageseh.Size = new System.Drawing.Size(177, 23);
@@ -1091,7 +1090,7 @@
             // 
             this.RemindGrant.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RemindGrant.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemindGrant.Location = new System.Drawing.Point(555, 123);
+            this.RemindGrant.Location = new System.Drawing.Point(555, 106);
             this.RemindGrant.Name = "RemindGrant";
             this.RemindGrant.ReadOnly = true;
             this.RemindGrant.Size = new System.Drawing.Size(177, 23);
@@ -1106,7 +1105,7 @@
             // 
             this.Insurance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Insurance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Insurance.Location = new System.Drawing.Point(372, 123);
+            this.Insurance.Location = new System.Drawing.Point(372, 106);
             this.Insurance.Name = "Insurance";
             this.Insurance.ReadOnly = true;
             this.Insurance.Size = new System.Drawing.Size(177, 23);
@@ -1121,7 +1120,7 @@
             // 
             this.MonageInsurance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MonageInsurance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonageInsurance.Location = new System.Drawing.Point(189, 123);
+            this.MonageInsurance.Location = new System.Drawing.Point(189, 106);
             this.MonageInsurance.Name = "MonageInsurance";
             this.MonageInsurance.ReadOnly = true;
             this.MonageInsurance.Size = new System.Drawing.Size(177, 23);
@@ -1136,7 +1135,7 @@
             // 
             this.DeborSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DeborSalePercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeborSalePercent.Location = new System.Drawing.Point(3, 123);
+            this.DeborSalePercent.Location = new System.Drawing.Point(3, 106);
             this.DeborSalePercent.Name = "DeborSalePercent";
             this.DeborSalePercent.ReadOnly = true;
             this.DeborSalePercent.Size = new System.Drawing.Size(180, 23);
@@ -1151,7 +1150,7 @@
             // 
             this.CashDebtorCashSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CashDebtorCashSalePercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CashDebtorCashSalePercent.Location = new System.Drawing.Point(1104, 173);
+            this.CashDebtorCashSalePercent.Location = new System.Drawing.Point(1104, 149);
             this.CashDebtorCashSalePercent.Name = "CashDebtorCashSalePercent";
             this.CashDebtorCashSalePercent.ReadOnly = true;
             this.CashDebtorCashSalePercent.Size = new System.Drawing.Size(177, 23);
@@ -1166,7 +1165,7 @@
             // 
             this.CreditDebtorCreditSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CreditDebtorCreditSalePercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreditDebtorCreditSalePercent.Location = new System.Drawing.Point(921, 173);
+            this.CreditDebtorCreditSalePercent.Location = new System.Drawing.Point(921, 149);
             this.CreditDebtorCreditSalePercent.Name = "CreditDebtorCreditSalePercent";
             this.CreditDebtorCreditSalePercent.ReadOnly = true;
             this.CreditDebtorCreditSalePercent.Size = new System.Drawing.Size(177, 23);
@@ -1181,7 +1180,7 @@
             // 
             this.MonagesheDebtorMonagesheSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MonagesheDebtorMonagesheSalePercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonagesheDebtorMonagesheSalePercent.Location = new System.Drawing.Point(738, 173);
+            this.MonagesheDebtorMonagesheSalePercent.Location = new System.Drawing.Point(738, 149);
             this.MonagesheDebtorMonagesheSalePercent.Name = "MonagesheDebtorMonagesheSalePercent";
             this.MonagesheDebtorMonagesheSalePercent.ReadOnly = true;
             this.MonagesheDebtorMonagesheSalePercent.Size = new System.Drawing.Size(177, 23);
@@ -1196,7 +1195,7 @@
             // 
             this.InsuranceSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InsuranceSalePercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsuranceSalePercent.Location = new System.Drawing.Point(555, 173);
+            this.InsuranceSalePercent.Location = new System.Drawing.Point(555, 149);
             this.InsuranceSalePercent.Name = "InsuranceSalePercent";
             this.InsuranceSalePercent.ReadOnly = true;
             this.InsuranceSalePercent.Size = new System.Drawing.Size(177, 23);
@@ -1211,7 +1210,7 @@
             // 
             this.InsuranceDebtorPercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InsuranceDebtorPercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsuranceDebtorPercent.Location = new System.Drawing.Point(372, 173);
+            this.InsuranceDebtorPercent.Location = new System.Drawing.Point(372, 149);
             this.InsuranceDebtorPercent.Name = "InsuranceDebtorPercent";
             this.InsuranceDebtorPercent.ReadOnly = true;
             this.InsuranceDebtorPercent.Size = new System.Drawing.Size(177, 23);
@@ -1226,7 +1225,7 @@
             // 
             this.SaleInsuranceSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SaleInsuranceSalePercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaleInsuranceSalePercent.Location = new System.Drawing.Point(189, 173);
+            this.SaleInsuranceSalePercent.Location = new System.Drawing.Point(189, 149);
             this.SaleInsuranceSalePercent.Name = "SaleInsuranceSalePercent";
             this.SaleInsuranceSalePercent.ReadOnly = true;
             this.SaleInsuranceSalePercent.Size = new System.Drawing.Size(177, 23);
@@ -1241,7 +1240,7 @@
             // 
             this.InsuranceMonageshePercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InsuranceMonageshePercent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsuranceMonageshePercent.Location = new System.Drawing.Point(3, 173);
+            this.InsuranceMonageshePercent.Location = new System.Drawing.Point(3, 149);
             this.InsuranceMonageshePercent.Name = "InsuranceMonageshePercent";
             this.InsuranceMonageshePercent.ReadOnly = true;
             this.InsuranceMonageshePercent.Size = new System.Drawing.Size(180, 23);
@@ -1320,7 +1319,6 @@
         private General.Controls.Grid grdReport;
         private General.Controls.Grid grdDarsad98;
         private General.Controls.GroupBox groupBox2;
-        private General.Controls.Grid grdkol;
         private General.Controls.GroupBox groupBox3;
         private General.Controls.Grid grdDarsad;
         private General.Controls.GroupBox groupBox6;
@@ -1383,5 +1381,6 @@
         private General.Controls.NumberBox SaleInsuranceSalePercent;
         private General.Controls.NumberBox InsuranceMonageshePercent;
         private General.Controls.NumberBox TotalSaleNoTax;
+        private General.Controls.Grid grdkol;
     }
 }

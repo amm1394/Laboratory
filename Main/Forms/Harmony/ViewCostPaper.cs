@@ -95,7 +95,6 @@ namespace RASF.Main.Forms.Harmony
             //Parameter7.Add(new System.Data.SqlClient.SqlParameter("ContractsCode", e.ContractsCode));
             //this.showSaveCostPaperList1.Fill(Parameter7);
 
-           
             this.letter_Scan2.Document = this.companiesCostPaperList1[0].Letter;
             this.letter_Scan3.Document = this.companiesCostPaperList1[0].CostPaper;
             this.letter_Scan4.Document = this.companiesCostPaperList1[0].EditedReport;

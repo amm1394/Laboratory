@@ -96,8 +96,8 @@
             // 
             this.pnlButton.Controls.Add(this.splitContainer1);
             this.pnlButton.Controls.Add(this.panel1);
-            this.pnlButton.Location = new System.Drawing.Point(0, 635);
-            this.pnlButton.Size = new System.Drawing.Size(1195, 30);
+            this.pnlButton.Location = new System.Drawing.Point(0, 627);
+            this.pnlButton.Size = new System.Drawing.Size(1665, 30);
             this.pnlButton.Controls.SetChildIndex(this.pnlSave, 0);
             this.pnlButton.Controls.SetChildIndex(this.pnlExit, 0);
             this.pnlButton.Controls.SetChildIndex(this.pnlUpdate, 0);
@@ -117,7 +117,7 @@
             // 
             this.pnlContent.Controls.Add(this.grpCash);
             this.pnlContent.Controls.Add(this.grpOfficesName);
-            this.pnlContent.Size = new System.Drawing.Size(1195, 635);
+            this.pnlContent.Size = new System.Drawing.Size(1665, 627);
             // 
             // btnUpdate
             // 
@@ -125,15 +125,15 @@
             // 
             // pnlUpdate
             // 
-            this.pnlUpdate.Location = new System.Drawing.Point(990, 0);
+            this.pnlUpdate.Location = new System.Drawing.Point(1460, 0);
             // 
             // pnlExit
             // 
-            this.pnlExit.Location = new System.Drawing.Point(1073, 0);
+            this.pnlExit.Location = new System.Drawing.Point(1543, 0);
             // 
             // pnlSave
             // 
-            this.pnlSave.Location = new System.Drawing.Point(1135, 0);
+            this.pnlSave.Location = new System.Drawing.Point(1605, 0);
             // 
             // printDialog1
             // 
@@ -176,7 +176,7 @@
             this.grdCash.Location = new System.Drawing.Point(3, 17);
             this.grdCash.Name = "grdCash";
             this.grdCash.RecordNavigator = true;
-            this.grdCash.Size = new System.Drawing.Size(1189, 565);
+            this.grdCash.Size = new System.Drawing.Size(1659, 557);
             this.grdCash.TabIndex = 0;
             this.grdCash.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center;
             this.grdCash.TotalRow = Janus.Windows.GridEX.InheritableBoolean.True;
@@ -208,7 +208,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnKol);
-            this.panel1.Location = new System.Drawing.Point(901, 0);
+            this.panel1.Location = new System.Drawing.Point(1371, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(83, 30);
             this.panel1.TabIndex = 6;
@@ -230,7 +230,7 @@
             this.grpCash.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpCash.Location = new System.Drawing.Point(0, 50);
             this.grpCash.Name = "grpCash";
-            this.grpCash.Size = new System.Drawing.Size(1195, 585);
+            this.grpCash.Size = new System.Drawing.Size(1665, 577);
             this.grpCash.TabIndex = 1;
             this.grpCash.Text = "گزارش شرکت های نقدی";
             this.grpCash.VisualStyle = Janus.Windows.UI.Dock.PanelVisualStyle.Office2007;
@@ -250,8 +250,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer1.Size = new System.Drawing.Size(990, 30);
-            this.splitContainer1.SplitterDistance = 893;
+            this.splitContainer1.Size = new System.Drawing.Size(1460, 30);
+            this.splitContainer1.SplitterDistance = 1316;
             this.splitContainer1.TabIndex = 7;
             // 
             // splitContainer2
@@ -269,8 +269,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer2.Size = new System.Drawing.Size(893, 30);
-            this.splitContainer2.SplitterDistance = 800;
+            this.splitContainer2.Size = new System.Drawing.Size(1316, 30);
+            this.splitContainer2.SplitterDistance = 1178;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -288,8 +288,8 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.label3);
             this.splitContainer3.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer3.Size = new System.Drawing.Size(800, 30);
-            this.splitContainer3.SplitterDistance = 713;
+            this.splitContainer3.Size = new System.Drawing.Size(1178, 30);
+            this.splitContainer3.SplitterDistance = 1049;
             this.splitContainer3.TabIndex = 0;
             // 
             // splitContainer4
@@ -307,8 +307,8 @@
             // 
             this.splitContainer4.Panel2.Controls.Add(this.label4);
             this.splitContainer4.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer4.Size = new System.Drawing.Size(713, 30);
-            this.splitContainer4.SplitterDistance = 625;
+            this.splitContainer4.Size = new System.Drawing.Size(1049, 30);
+            this.splitContainer4.SplitterDistance = 919;
             this.splitContainer4.TabIndex = 0;
             // 
             // splitContainer5
@@ -326,8 +326,8 @@
             // 
             this.splitContainer5.Panel2.Controls.Add(this.label5);
             this.splitContainer5.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer5.Size = new System.Drawing.Size(625, 30);
-            this.splitContainer5.SplitterDistance = 523;
+            this.splitContainer5.Size = new System.Drawing.Size(919, 30);
+            this.splitContainer5.SplitterDistance = 769;
             this.splitContainer5.TabIndex = 0;
             // 
             // splitContainer6
@@ -344,8 +344,8 @@
             // 
             this.splitContainer6.Panel2.Controls.Add(this.label6);
             this.splitContainer6.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer6.Size = new System.Drawing.Size(523, 30);
-            this.splitContainer6.SplitterDistance = 409;
+            this.splitContainer6.Size = new System.Drawing.Size(769, 30);
+            this.splitContainer6.SplitterDistance = 601;
             this.splitContainer6.TabIndex = 0;
             // 
             // label6
@@ -427,7 +427,7 @@
             this.grpOfficesName.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpOfficesName.Location = new System.Drawing.Point(0, 0);
             this.grpOfficesName.Name = "grpOfficesName";
-            this.grpOfficesName.Size = new System.Drawing.Size(1195, 50);
+            this.grpOfficesName.Size = new System.Drawing.Size(1665, 50);
             this.grpOfficesName.TabIndex = 3;
             this.grpOfficesName.Text = "انتخاب";
             this.grpOfficesName.VisualStyle = Janus.Windows.UI.Dock.PanelVisualStyle.Office2007;
@@ -435,7 +435,7 @@
             // btnConfirmation
             // 
             this.btnConfirmation.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnConfirmation.Location = new System.Drawing.Point(919, 17);
+            this.btnConfirmation.Location = new System.Drawing.Point(1389, 17);
             this.btnConfirmation.Name = "btnConfirmation";
             this.btnConfirmation.Size = new System.Drawing.Size(56, 30);
             this.btnConfirmation.TabIndex = 6;
@@ -447,7 +447,7 @@
             // 
             this.lightName1.BackColor = System.Drawing.Color.Transparent;
             this.lightName1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lightName1.Location = new System.Drawing.Point(975, 17);
+            this.lightName1.Location = new System.Drawing.Point(1445, 17);
             this.lightName1.Name = "lightName1";
             this.lightName1.Size = new System.Drawing.Size(217, 30);
             this.lightName1.TabIndex = 0;
@@ -456,7 +456,7 @@
             // ReportOfCompanyKol_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1195, 665);
+            this.ClientSize = new System.Drawing.Size(1665, 657);
             this.Name = "ReportOfCompanyKol_1";
             this.ShowpnlButton = true;
             this.ShowpnlExit = true;

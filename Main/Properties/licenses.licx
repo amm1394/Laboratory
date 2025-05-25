@@ -1,6 +1,7 @@
 Janus.Windows.GridEX.GridEX, Janus.Windows.GridEX.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf
-Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Janus.Windows.UI.Tab.UITab, Janus.Windows.UI.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf
-Telerik.WinControls.UI.RadCollapsiblePanel, Telerik.WinControls.UI, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Telerik.WinControls.UI.RadDesktopAlert, Telerik.WinControls.UI, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadSplitContainer, Telerik.WinControls.UI, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Telerik.WinControls.UI.RadCollapsiblePanel, Telerik.WinControls.UI, Version=2024.1.312.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e

@@ -44,7 +44,8 @@ namespace RASF.Main.Forms.Settings
                     txtUserName.Text = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split(new char[1] { '\\' })[1];
             //txtUserName.Enabled = true;
 
-            //txtUserName.Text = "knabavi";
+            //txtUserName.Text = "brahmani";
+            txtUserName.Text = "knabavi";
             //                }
             //                catch (IOException ex)
             //                {

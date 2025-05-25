@@ -512,6 +512,7 @@
             this.mnuReportMounthlyLaboratory2022To2023Form = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportMounthlyLaboratory2023To2024Form = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportMounthlyLaboratory2024To2025Form = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportMounthlyLaboratory2025To2026Form = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportMounthlyTedadLaboratory2022To2023Form = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportMounthlyTedadLaboratory2023To2024Form = new System.Windows.Forms.ToolStripMenuItem();
@@ -640,7 +641,6 @@
             this.mnuSendLettersForDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.گزارشنامههاToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSendLettersReport = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuReportMounthlyLaboratory2025To2026Form = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -667,7 +667,7 @@
             this.دبیرخانهToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1217, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1653, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -4037,7 +4037,7 @@
             this.mnuReportOfInsurence,
             this.mnuReportOfRecieveCustomer});
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(175, 22);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem10.Text = "گزارشات مالی";
             // 
             // toolStripMenuItem8
@@ -4166,6 +4166,12 @@
             this.mnuReportMounthlyLaboratory2024To2025Form.Name = "mnuReportMounthlyLaboratory2024To2025Form";
             this.mnuReportMounthlyLaboratory2024To2025Form.Size = new System.Drawing.Size(231, 22);
             this.mnuReportMounthlyLaboratory2024To2025Form.Text = "گزارش ماهانه و کل سال 1403";
+            // 
+            // mnuReportMounthlyLaboratory2025To2026Form
+            // 
+            this.mnuReportMounthlyLaboratory2025To2026Form.Name = "mnuReportMounthlyLaboratory2025To2026Form";
+            this.mnuReportMounthlyLaboratory2025To2026Form.Size = new System.Drawing.Size(231, 22);
+            this.mnuReportMounthlyLaboratory2025To2026Form.Text = "گزارش ماهانه و کل سال 1404";
             // 
             // toolStripMenuItem7
             // 
@@ -4301,7 +4307,7 @@
             // 
             this.mnuReportOfCompanyKol.Name = "mnuReportOfCompanyKol";
             this.mnuReportOfCompanyKol.Size = new System.Drawing.Size(279, 22);
-            this.mnuReportOfCompanyKol.Text = "گزارش شرکت ها (کل)";
+            this.mnuReportOfCompanyKol.Text = "s";
             // 
             // mnuReportOfCompanyKol_1
             // 
@@ -4528,7 +4534,7 @@
             this.mnuViewLogDateToDate,
             this.mnuSent_To_ContractorsForm});
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(175, 22);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem11.Text = "پیگیری آزمایشگاه ها";
             this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
@@ -5050,17 +5056,11 @@
             this.mnuSendLettersReport.Size = new System.Drawing.Size(199, 22);
             this.mnuSendLettersReport.Text = "گزارش نامه های ارسالی";
             // 
-            // mnuReportMounthlyLaboratory2025To2026Form
-            // 
-            this.mnuReportMounthlyLaboratory2025To2026Form.Name = "mnuReportMounthlyLaboratory2025To2026Form";
-            this.mnuReportMounthlyLaboratory2025To2026Form.Size = new System.Drawing.Size(231, 22);
-            this.mnuReportMounthlyLaboratory2025To2026Form.Text = "گزارش ماهانه و کل سال 1404";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 348);
+            this.ClientSize = new System.Drawing.Size(1653, 348);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
